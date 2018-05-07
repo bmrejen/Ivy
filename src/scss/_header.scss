@@ -1,0 +1,66 @@
+header {
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	left: 0;
+  top: 0;
+	a,
+	.btn.btn-link {
+		color: white;
+  }
+  &.animated.headroom--top {
+    transition: background-color 0.3s ease !important;
+    background-color: rgba(black, 0) !important;
+    &.slideDown,
+    &.slideUp {
+      animation-name: none !important;
+    }
+  }
+	&.animated.slideDown,
+	&.animated.slideUp {
+		background-color: rgba(black, 0.6);
+	}
+}
+
+.dropdown .icon {
+	font-size: 0.5rem;
+	vertical-align: 0% !important;
+}
+
+.dropdown ul {
+	font-family: $header-font-family;
+	text-transform: uppercase;
+}
+
+// Dropdown
+.dropdown {
+	display: inline-block;
+	position: relative;
+	.menu {
+		animation: slide-down 0.15s ease 1;
+		display: none;
+		left: 0;
+		max-height: 50vh;
+		overflow-y: auto;
+		position: absolute;
+		top: 100%;
+	}
+	&.dropdown-right {
+		.menu {
+			left: auto;
+			right: 0;
+		}
+	}
+	&.active .menu,
+	.dropdown-toggle:hover+.menu,
+	.menu:hover {
+		display: block;
+	}
+	&.menu:hover {
+		display: inherit;
+	}
+	&.dropdown-toggle:hover+.menu,
+	.menu:active {
+		display: block;
+	}
+}

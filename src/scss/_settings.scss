@@ -1,0 +1,47 @@
+// Colours
+$primary-color: #0d86d9;
+
+// Core colors - accent
+$accent-color: #d7263d;
+$accent-color-dark: darken($accent-color, 3%);
+$accent-color-light: lighten($accent-color, 3%);
+$secondary-color: lighten($accent-color, 37.5%);
+$secondary-color-dark: darken($secondary-color, 3%);
+$secondary-color-light: lighten($secondary-color, 3%);
+
+// Typography
+$base-font-family: "Vollkorn", Constantia, "Lucida Bright", Lucidabright,
+  "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+  "Liberation Serif", Georgia, serif;
+$header-font-family: "Unica One", -apple-system, system-ui, BlinkMacSystemFont,
+  "Segoe UI", Roboto;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $header-font-family;
+  text-transform: uppercase;
+}
+
+// Variables and mixins
+@import "../../node_modules/spectre.css/src/variables";
+@import "../../node_modules/spectre.css/src/mixins";
+
+// Spacing
+@include margin-variant(3, $unit-3);
+@include margin-variant(4, $unit-4);
+@include margin-variant(5, $unit-5);
+@include margin-variant(6, $unit-6);
+@include padding-variant(3, $unit-3);
+@include padding-variant(4, $unit-4);
+@include padding-variant(5, $unit-5);
+@include padding-variant(6, $unit-6);
