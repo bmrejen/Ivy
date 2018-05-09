@@ -53,7 +53,7 @@ gulp.task("css", function () {
     )
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("app/css"))
-    .pipe(wait(2500))
+    .pipe(wait(1500))
     .pipe(browserSync.reload({
       stream: true
     }));

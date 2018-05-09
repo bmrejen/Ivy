@@ -6,36 +6,41 @@
  * @version 1.0.0
  * Copyright 2018. MIT licensed.
  */
-(function ($, window, document, undefined) {
-
+(function($, window, document, undefined) {
 	'use strict';
 
-	$(function () {
+	$(function() {
 		feather.replace();
 		$('header').headroom({
-			'offset': 205,
-			'tolerance': 5,
-			'classes': {
-				'initial': 'animated',
-				'pinned': 'slideDown',
-				'unpinned': 'slideUp'
+			offset: 205,
+			tolerance: 5,
+			classes: {
+				initial: 'animated',
+				pinned: 'slideDown',
+				unpinned: 'slideUp'
 			}
 		});
-		$('.steps').slick({
+		$('.slider').on('init', function(event, slick) {
+			var $items = slick.$dots.find('li');
+			$items.addClass('step-item');
+		});
+
+		$('.slider').slick({
 			infinite: true,
 			speed: 500,
 			fade: true,
 			cssEase: 'linear',
-			prevArrow: false,
-			nextArrow: '<button class="btn btn-ghost next">Next Step <i class = "icon icon-forward" > < /i> </button>',
-
-		});
-		$('button.next').click(function () {
-			$(".steps").slick('slickNext');
-		});
-		$('button.prev').click(function () {
-			$(".steps").slick('slickPrev');
+			dots: true,
+			prevArrow: $('button.prev'),
+			nextArrow: $('button.next'),
+			appendDots: $('.journey-steps'),
+			dotsClass: 'step',
+			zIndex: 3,
+			customPaging: function(slider, i) {
+				var step = $(slider.$slides[i]).data('step');
+				var title =$(slider.$slides[i]).find('.slide-title').text();
+				return '<a class="tooltip" data-tooltip="'+step+'">'+title+'</a>';
+			}
 		});
 	});
-
 })(jQuery, window, document);

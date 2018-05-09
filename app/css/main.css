@@ -258,10 +258,10 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40rem;
   background-image: url(../images/hero.jpg);
   background-position: center;
   background-size: cover;
@@ -285,14 +285,14 @@ header {
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.15) 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.15) 100%); }
   .hero .hero-lead {
-    margin-bottom: 6rem; }
+    margin-top: auto; }
     .hero .hero-lead h1 {
       font-size: 3.2rem;
       padding-top: 1.6rem;
       margin-bottom: 0.25rem;
       text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
     .hero .hero-lead button {
-      letter-spacing: .125rem; }
+      letter-spacing: 0.125rem; }
   .hero .schools {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -302,7 +302,8 @@ header {
             align-items: center;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
-            justify-content: space-evenly; }
+            justify-content: space-evenly;
+    margin-top: auto; }
 
 .full-width {
   width: 100vw;
@@ -311,6 +312,9 @@ header {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw; }
+
+.section-title {
+  margin-bottom: 1.6rem; }
 
 .btn {
   -webkit-transition: all .2s ease;
@@ -4227,17 +4231,32 @@ a.text-error:focus, a.text-error:hover {
           flex-flow: column;
   padding: 4rem 0;
   min-height: 30rem; }
-  .journey .steps {
+  .journey .step {
+    margin: 0.2rem auto;
+    width: 70%; }
+    .journey .step .step-item a {
+      cursor: pointer; }
+    .journey .step .step-item.slick-active a {
+      color: #0d86d9; }
+      .journey .step .step-item.slick-active a::before {
+        background: #fff;
+        border: 0.1rem solid #0d86d9; }
+    .journey .step .step-item.slick-active ~ .step-item::before {
+      background: #e7e9ed; }
+    .journey .step .step-item.slick-active ~ .step-item a::before {
+      background: #e7e9ed; }
+  .journey .slider {
     padding: 2rem 0;
     max-width: 960px; }
-    .journey .steps .slide {
+    .journey .slider .slide {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
-              align-items: stretch; }
-    .journey .steps .overlay {
+              align-items: stretch;
+      height: 22rem; }
+    .journey .slider .overlay {
       color: white;
       background-color: #d7263d;
       display: -webkit-box;
@@ -4255,10 +4274,9 @@ a.text-error:focus, a.text-error:hover {
               align-items: flex-start;
       padding: 0 1.6rem; }
 
-.tooltip:focus::after, .tooltip:hover::after {
-  opacity: 1;
-  -webkit-transform: translate(-50%, -0.2rem);
-      -ms-transform: translate(-50%, -0.2rem);
-          transform: translate(-50%, -0.2rem);
+.tooltip {
   text-transform: uppercase;
   font-family: "Unica One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto; }
+
+.icon-plane svg path {
+  fill: #0d86d9 !important; }
