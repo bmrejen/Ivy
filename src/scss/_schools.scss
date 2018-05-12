@@ -1,0 +1,27 @@
+.schools {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: auto;
+}
+
+.school-overview {
+    padding: 2rem 0;
+    background-color: #FAFAFA;
+    border-bottom: $gray-color-light solid 1px;
+    border-top: $gray-color-light solid 1px;
+    .section-title {
+        margin-bottom: 0;
+    }
+	.school-grid {
+		.school-row {
+			.slick-track {
+				display: flex;
+				align-items: center;
+			}
+			img {
+				margin: 1rem 2rem;
+			}
+		}
+	}
+}

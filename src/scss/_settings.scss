@@ -1,5 +1,7 @@
 // Colours
 $primary-color: #0d86d9;
+$black: #212121;
+
 
 // Core colors - accent
 $accent-color: #d7263d;
@@ -45,3 +47,6 @@ h6,
 @include padding-variant(4, $unit-4);
 @include padding-variant(5, $unit-5);
 @include padding-variant(6, $unit-6);
+
+// Layout
+$layout-spacing-lg: $unit-6;

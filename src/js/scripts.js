@@ -30,9 +30,20 @@
 			zIndex: 3,
 			customPaging: function(slider, i) {
 				var step = $(slider.$slides[i]).data('step');
-				var title =$(slider.$slides[i]).find('.slide-title').text();
-				return '<a class="tooltip" data-tooltip="'+step+'">'+title+'</a>';
+				var title = $(slider.$slides[i])
+					.find('.slide-title')
+					.text();
+				return '<a class="tooltip" data-tooltip="' + step + '">' + title + '</a>';
 			}
 		});
+
+		$('.school-row').slick({
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 2000,
+			infinite: true,
+			arrows: false,
+		  });
 	});
 })(jQuery, window, document);

@@ -1,0 +1,24 @@
+.team {
+    padding: 4rem 0;
+    .section-title {
+        padding-bottom: 2rem;
+    }
+	.column {
+		padding-left: $layout-spacing-lg;
+		padding-right: $layout-spacing-lg;
+	}
+	.circle {
+		max-width: 8rem;
+    }
+    
+    .subtitle {
+        padding-top: $layout-spacing-lg;
+        color: $accent-color;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        color: $black;
+    }
+}

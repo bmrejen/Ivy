@@ -261,7 +261,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 40rem;
+  height: 30rem;
   background-image: url(../images/hero.jpg);
   background-position: center;
   background-size: cover;
@@ -285,7 +285,7 @@ header {
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.15) 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.15) 100%); }
   .hero .hero-lead {
-    margin-top: auto; }
+    /*margin-top: auto;*/ }
     .hero .hero-lead h1 {
       font-size: 3.2rem;
       padding-top: 1.6rem;
@@ -1421,12 +1421,12 @@ dl dd {
   margin-bottom: 0.4rem; }
 
 fieldset {
-  margin-bottom: 0.8rem; }
+  margin-bottom: 1.2rem; }
 
 legend {
   font-size: 0.9rem;
   font-weight: 500;
-  margin-bottom: 0.8rem; }
+  margin-bottom: 1.2rem; }
 
 .form-label {
   display: block;
@@ -2562,14 +2562,14 @@ summary.accordion-header::-webkit-details-marker {
   .card .card-header,
   .card .card-body,
   .card .card-footer {
-    padding: 0.8rem;
+    padding: 1.2rem;
     padding-bottom: 0; }
     .card .card-header:last-child,
     .card .card-body:last-child,
     .card .card-footer:last-child {
-      padding-bottom: 0.8rem; }
+      padding-bottom: 1.2rem; }
   .card .card-image {
-    padding-top: 0.8rem; }
+    padding-top: 1.2rem; }
     .card .card-image:first-child {
       padding-top: 0; }
       .card .card-image:first-child img {
@@ -2634,12 +2634,12 @@ summary.accordion-header::-webkit-details-marker {
   text-align: center;
   padding: 3.2rem 1.6rem; }
   .empty .empty-icon {
-    margin-bottom: 0.8rem; }
+    margin-bottom: 1.2rem; }
   .empty .empty-title,
   .empty .empty-subtitle {
     margin: 0.4rem auto; }
   .empty .empty-action {
-    margin-top: 0.8rem; }
+    margin-top: 1.2rem; }
 
 .menu {
   -webkit-box-shadow: 0 0.05rem 0.2rem rgba(69, 77, 93, 0.3);
@@ -2835,7 +2835,7 @@ summary.accordion-header::-webkit-details-marker {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    padding: 0.8rem; }
+    padding: 1.2rem; }
   .panel .panel-nav {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
@@ -2845,7 +2845,7 @@ summary.accordion-header::-webkit-details-marker {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     overflow-y: auto;
-    padding: 0 0.8rem; }
+    padding: 0 1.2rem; }
 
 .popover {
   display: inline-block;
@@ -4280,3 +4280,49 @@ a.text-error:focus, a.text-error:hover {
 
 .icon-plane svg path {
   fill: #0d86d9 !important; }
+
+.schools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: auto; }
+
+.school-overview {
+  padding: 2rem 0;
+  background-color: #FAFAFA;
+  border-bottom: #e7e9ed solid 1px;
+  border-top: #e7e9ed solid 1px; }
+  .school-overview .section-title {
+    margin-bottom: 0; }
+  .school-overview .school-grid .school-row .slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .school-overview .school-grid .school-row img {
+    margin: 1rem 2rem; }
+
+.team {
+  padding: 4rem 0; }
+  .team .section-title {
+    padding-bottom: 2rem; }
+  .team .column {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem; }
+  .team .circle {
+    max-width: 8rem; }
+  .team .subtitle {
+    padding-top: 1.2rem;
+    color: #d7263d;
+    font-weight: 600;
+    letter-spacing: 2px; }
+  .team h2 {
+    color: #212121; }
