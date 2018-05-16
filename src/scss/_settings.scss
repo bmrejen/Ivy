@@ -2,7 +2,6 @@
 $primary-color: #0d86d9;
 $black: #212121;
 
-
 // Core colors - accent
 $accent-color: #d7263d;
 $accent-color-dark: darken($accent-color, 3%);
@@ -10,6 +9,15 @@ $accent-color-light: lighten($accent-color, 3%);
 $secondary-color: lighten($accent-color, 37.5%);
 $secondary-color-dark: darken($secondary-color, 3%);
 $secondary-color-light: lighten($secondary-color, 3%);
+
+// Backgrounds
+.bg-white {
+	background: white;
+}
+.bg-accent {
+	background: $accent-color;
+	color: white;
+}
 
 // Typography
 $base-font-family: "Vollkorn", Constantia, "Lucida Bright", Lucidabright,

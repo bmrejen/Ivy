@@ -1,3 +1,10 @@
+.bg-white {
+  background: white; }
+
+.bg-accent {
+  background: #d7263d;
+  color: white; }
+
 h1,
 h2,
 h3,
@@ -293,17 +300,6 @@ header {
       text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
     .hero .hero-lead button {
       letter-spacing: 0.125rem; }
-  .hero .schools {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-top: auto; }
 
 .full-width {
   width: 100vw;
@@ -4326,3 +4322,36 @@ a.text-error:focus, a.text-error:hover {
     letter-spacing: 2px; }
   .team h2 {
     color: #212121; }
+
+.features {
+  padding: 4rem 0;
+  background-color: #FAFAFA;
+  border-bottom: #e7e9ed solid 1px;
+  border-top: #e7e9ed solid 1px; }
+  .features .section-title {
+    padding-bottom: 2rem; }
+  .features .panel {
+    border: none;
+    border-radius: 0; }
+    .features .panel .panel-header {
+      padding-bottom: 0; }
+      .features .panel .panel-header .panel-title {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .features .panel .panel-header .panel-title .feather {
+          margin-top: 0.2rem; }
+    .features .panel .panel-body ul {
+      list-style-type: none; }
+      .features .panel .panel-body ul li:before {
+        content: "\f00c";
+        /* FontAwesome Unicode */
+        font-family: FontAwesome;
+        display: inline-block;
+        margin-left: -.75em;
+        /* same as padding-left set on li */
+        width: 1.5em;
+        /* same as padding-left set on li */ }

@@ -350,6 +350,12 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+beefup@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/beefup/-/beefup-1.1.6.tgz#49abea87afabc3bd92dcf36a4676452aa3415354"
+  dependencies:
+    jquery ">=1.8.0"
+
 beeper@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/beeper/-/beeper-1.1.1.tgz#e6d5ea8c5dad001304a70b22638447f69cb2f809"
@@ -3149,7 +3155,7 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-jquery@^3.3.1:
+jquery@>=1.8.0, jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 

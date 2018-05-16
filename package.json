@@ -27,6 +27,7 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
+    "beefup": "^1.1.6",
     "bourbon": "^5.0.0",
     "global": "^4.3.2",
     "headroom.js": "^0.9.4",

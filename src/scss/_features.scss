@@ -1,0 +1,38 @@
+.features {
+	padding: 4rem 0;
+	background-color: #FAFAFA;
+	border-bottom: $gray-color-light solid 1px;
+	border-top: $gray-color-light solid 1px;
+	.section-title {
+		padding-bottom: 2rem;
+	}
+	.panel {
+		border: none;
+		border-radius: 0;
+		.panel-header {
+			padding-bottom: 0;
+			.panel-title {
+				display: flex;
+				justify-content: space-between;
+				.feather {
+					margin-top: 0.2rem;
+				}
+			}
+		}
+		.panel-body {
+			ul {
+				list-style-type: none;
+				li:before {
+					content: "\f00c";
+					/* FontAwesome Unicode */
+					font-family: FontAwesome;
+					display: inline-block;
+					margin-left: -.75em;
+					/* same as padding-left set on li */
+					width: 1.5em;
+					/* same as padding-left set on li */
+				}
+			}
+		}
+	}
+}
