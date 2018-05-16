@@ -4355,3 +4355,45 @@ a.text-error:focus, a.text-error:hover {
         /* same as padding-left set on li */
         width: 1.5em;
         /* same as padding-left set on li */ }
+
+.signup .signup-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .signup .signup-form input[type='text'],
+  .signup .signup-form [type='email'],
+  .signup .signup-form select,
+  .signup .signup-form textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Unica One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+    letter-spacing: 1px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.5em 0;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  .signup .signup-form input[type='text']:focus,
+  .signup .signup-form [type='email']:focus,
+  .signup .signup-form textarea:focus {
+    outline: none;
+    padding: 0 0 0.875em 0; }
