@@ -4397,3 +4397,19 @@ a.text-error:focus, a.text-error:hover {
   .signup .signup-form textarea:focus {
     outline: none;
     padding: 0 0 0.875em 0; }
+
+.footer {
+  font-family: "Unica One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  text-transform: uppercase; }
+  .footer .column {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .footer p {
+    margin: 0.8rem 0 0.8rem 0.8rem;
+    padding: 0; }
+  .footer ul li {
+    text-align: center;
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 1rem; }

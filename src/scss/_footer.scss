@@ -1,0 +1,17 @@
+.footer {
+	.column {
+		align-items: center;
+	}
+	font-family: $header-font-family;
+	text-transform: uppercase;
+	p {
+		margin: $unit-4 0 $unit-4 $unit-4;
+		padding: 0;
+	}
+	ul li {
+		text-align: center;
+		display: inline-block;
+		margin-top: 0;
+		margin-left: 1rem;
+	}
+}
