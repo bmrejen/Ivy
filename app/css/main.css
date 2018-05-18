@@ -494,8 +494,20 @@ header {
     color: white; }
     .btn.btn-ghost:hover {
       background-color: white;
-      border-color: white;
-      color: #d7263d; }
+      border-color: white; }
+  .btn.ghost-blue:hover {
+    color: #0d86d9; }
+  .btn.ghost-red:hover {
+    color: #d7263d; }
+  .btn.ghost-white {
+    background-color: transparent;
+    padding: 0 1rem;
+    border-color: #454d5d;
+    color: #454d5d; }
+    .btn.ghost-white:hover {
+      background-color: #0d86d9;
+      border-color: #0d86d9;
+      color: white; }
 
 .btn-fancy {
   -webkit-transition: all .2s ease;

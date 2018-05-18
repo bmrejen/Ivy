@@ -16,7 +16,23 @@
 		&:hover {
 			background-color: white;
 			border-color: white;
-			color: $accent-color;
+		}
+	}
+	&.ghost-blue:hover {
+		color: $primary-color;
+	}
+	&.ghost-red:hover {
+		color: $accent-color;
+	}
+	&.ghost-white {
+		background-color: transparent;
+		padding: 0 1rem;
+		border-color:$dark-color;
+		color: $dark-color;
+		&:hover {
+			background-color: $primary-color;
+			border-color: $primary-color;
+			color: white;
 		}
 	}
 }
@@ -154,9 +170,8 @@
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
-  }
-  
-  &.feather-calendar {
-    vertical-align: -10%;
-  }
+	}
+	&.feather-calendar {
+		vertical-align: -10%;
+	}
 }
