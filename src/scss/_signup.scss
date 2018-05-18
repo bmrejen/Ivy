@@ -1,13 +1,12 @@
 .signup {
 	.signup-form {
-        display: flex;
-        flex-flow: column;
-        align-content: center;
-        justify-content: center;
+		display: flex;
+		flex-flow: column;
+		align-content: center;
+		justify-content: center;
 		input[type='text'],
 		[type='email'],
-		select,
-		textarea {
+		[type='tel'] {
 			background: none;
 			border: none;
 			border-bottom: solid 1px rgba($color: white, $alpha: .6);
@@ -33,9 +32,22 @@
 		}
 		input[type='text']:focus,
 		[type='email']:focus,
-		textarea:focus {
+		[type='tel']:focus {
 			outline: none;
 			padding: 0 0 0.875em 0;
+			&:required {
+				border-bottom: solid 1px $error-color;
+			}
+		}
+		input[type='text']:valid,
+		[type='email']:valid,
+		[type='tel']:valid {
+			border-bottom: solid 1px $success-color;
+		}
+		input[type='text']:invalid,
+		[type='email']:invalid,
+		[type='tel']:invalid {
+			border-bottom: solid 1px $error-color;
 		}
 	}
 }

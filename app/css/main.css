@@ -373,19 +373,19 @@ header {
       border-bottom-color: #fff;
       border-left-color: #fff; }
   .btn.btn-success {
-    background: #32b643;
-    border-color: #2faa3f;
+    background: #04e762;
+    border-color: #04d85c;
     color: #fff; }
     .btn.btn-success:focus {
-      -webkit-box-shadow: 0 0 0 0.1rem rgba(50, 182, 67, 0.2);
-              box-shadow: 0 0 0 0.1rem rgba(50, 182, 67, 0.2); }
+      -webkit-box-shadow: 0 0 0 0.1rem rgba(4, 231, 98, 0.2);
+              box-shadow: 0 0 0 0.1rem rgba(4, 231, 98, 0.2); }
     .btn.btn-success:focus, .btn.btn-success:hover {
-      background: #30ae40;
-      border-color: #2da23c;
+      background: #04dd5e;
+      border-color: #04ce57;
       color: #fff; }
     .btn.btn-success:active, .btn.btn-success.active {
-      background: #2a9a39;
-      border-color: #278e34;
+      background: #03c453;
+      border-color: #03b54d;
       color: #fff; }
     .btn.btn-success.loading::after {
       border-bottom-color: #fff;
@@ -1504,7 +1504,7 @@ textarea.form-input {
   margin-top: 0.2rem; }
   .has-success .form-input-hint,
   .is-success + .form-input-hint {
-    color: #32b643; }
+    color: #04e762; }
   .has-error .form-input-hint,
   .is-error + .form-input-hint {
     color: #e85600; }
@@ -1770,12 +1770,12 @@ textarea.form-input {
 .has-success .form-input, .form-input.is-success, .has-success
 .form-select,
 .form-select.is-success {
-  border-color: #32b643; }
+  border-color: #04e762; }
   .has-success .form-input:focus, .form-input.is-success:focus, .has-success
   .form-select:focus,
   .form-select.is-success:focus {
-    -webkit-box-shadow: 0 0 0 0.1rem rgba(50, 182, 67, 0.2);
-            box-shadow: 0 0 0 0.1rem rgba(50, 182, 67, 0.2); }
+    -webkit-box-shadow: 0 0 0 0.1rem rgba(4, 231, 98, 0.2);
+            box-shadow: 0 0 0 0.1rem rgba(4, 231, 98, 0.2); }
 
 .has-error .form-input, .form-input.is-error, .has-error
 .form-select,
@@ -1864,7 +1864,7 @@ input:disabled + .form-icon, input.disabled + .form-icon {
     background: #f5c7cd;
     color: #0d86d9; }
   .label.label-success {
-    background: #32b643;
+    background: #04e762;
     color: #fff; }
   .label.label-warning {
     background: #ffb700;
@@ -2411,7 +2411,7 @@ summary.accordion-header::-webkit-details-marker {
     height: .5em;
     width: .5em; }
     .avatar .avatar-presence.online {
-      background: #32b643; }
+      background: #04e762; }
     .avatar .avatar-presence.busy {
       background: #e85600; }
     .avatar .avatar-presence.away {
@@ -3070,8 +3070,8 @@ summary.accordion-header::-webkit-details-marker {
     background: rgba(13, 134, 217, 0.9);
     border-color: #0d86d9; }
   .toast.toast-success {
-    background: rgba(50, 182, 67, 0.9);
-    border-color: #32b643; }
+    background: rgba(4, 231, 98, 0.9);
+    border-color: #04e762; }
   .toast.toast-warning {
     background: rgba(255, 183, 0, 0.9);
     border-color: #ffb700; }
@@ -3213,10 +3213,10 @@ a.text-light:focus, a.text-light:hover {
   color: #f2f2f2; }
 
 .text-success {
-  color: #32b643; }
+  color: #04e762; }
 
 a.text-success:focus, a.text-success:hover {
-  color: #2da23c; }
+  color: #04ce57; }
 
 .text-warning {
   color: #ffb700; }
@@ -3245,7 +3245,7 @@ a.text-error:focus, a.text-error:hover {
   background: #f8f9fa; }
 
 .bg-success {
-  background: #32b643;
+  background: #04e762;
   color: #fff; }
 
 .bg-warning {
@@ -4385,8 +4385,7 @@ a.text-error:focus, a.text-error:hover {
           justify-content: center; }
   .signup .signup-form input[type='text'],
   .signup .signup-form [type='email'],
-  .signup .signup-form select,
-  .signup .signup-form textarea {
+  .signup .signup-form [type='tel'] {
     background: none;
     border: none;
     border-bottom: solid 1px rgba(255, 255, 255, 0.6);
@@ -4408,9 +4407,21 @@ a.text-error:focus, a.text-error:hover {
     transition: all 0.3s; }
   .signup .signup-form input[type='text']:focus,
   .signup .signup-form [type='email']:focus,
-  .signup .signup-form textarea:focus {
+  .signup .signup-form [type='tel']:focus {
     outline: none;
     padding: 0 0 0.875em 0; }
+    .signup .signup-form input[type='text']:focus:required,
+    .signup .signup-form [type='email']:focus:required,
+    .signup .signup-form [type='tel']:focus:required {
+      border-bottom: solid 1px #e85600; }
+  .signup .signup-form input[type='text']:valid,
+  .signup .signup-form [type='email']:valid,
+  .signup .signup-form [type='tel']:valid {
+    border-bottom: solid 1px #04e762; }
+  .signup .signup-form input[type='text']:invalid,
+  .signup .signup-form [type='email']:invalid,
+  .signup .signup-form [type='tel']:invalid {
+    border-bottom: solid 1px #e85600; }
 
 .footer {
   font-family: "Unica One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
