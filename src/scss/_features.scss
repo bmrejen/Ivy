@@ -3,6 +3,9 @@
 	background-color: #FAFAFA;
 	border-bottom: $gray-color-light solid 1px;
 	border-top: $gray-color-light solid 1px;
+	.columns {
+		border: $gray-color-light 1px solid;
+	}
 	.section-title {
 		padding-bottom: 2rem;
 	}

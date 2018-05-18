@@ -10,6 +10,7 @@
 	 crossorigin="anonymous" />
 	<link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
 
@@ -208,23 +209,23 @@
 	<section class="team container grid-lg">
 		<h1 class="h3 text-center section-title">Meet Our Judges</h1>
 		<div class="columns">
-			<div class="column text-center">
+			<div class="column text-center team-member">
 				<img src="images/team_2.jpg" alt="" class="circle">
 				<h6 class="subtitle">Founder</h6>
 				<h2 class="h4">Benoit Mrejen - 白诺</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 					aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
-			<div class="column text-center">
+			<div class="column text-center team-member">
 				<img src="images/team_1.jpg" alt="" class="circle">
-				<h6 class="subtitle">Judge</h6>
+				<h6 class="subtitle">Teacher</h6>
 				<h2 class="h4">Renjing</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 					aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
-			<div class="column text-center">
+			<div class="column text-center team-member">
 				<img src="images/team_3.jpg" alt="" class="circle">
-				<h6 class="subtitle">Judge</h6>
+				<h6 class="subtitle">Teacher</h6>
 				<h2 class="h4">Jacqueline Chen</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 					aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -237,7 +238,7 @@
 		<div class="container grid-lg">
 			<div class="columns col-gapless">
 				<div class="column">
-					<div class="panel bg-primary">
+					<div class="panel bg-primary panel-1">
 						<div class="panel-header">
 							<div class="panel-title">
 								<h5>Screenings</h5>
@@ -261,7 +262,7 @@
 					</div>
 				</div>
 				<div class="column">
-					<div class="panel bg-white">
+					<div class="panel bg-white panel-2">
 						<div class="panel-header">
 							<div class="panel-title">
 								<h5>Amazing Support</h5>
@@ -285,7 +286,7 @@
 					</div>
 				</div>
 				<div class="column">
-					<div class="panel bg-accent">
+					<div class="panel bg-accent panel-3">
 						<div class="panel-header">
 							<div class="panel-title">
 								<h5>Career Security</h5>
@@ -340,7 +341,7 @@
 					</form>
 				</div>
 				<div class="column">
-					<img src="images/phone.png" alt="" class="img-responsive">
+					<img src="images/phone.png" alt="" class="img-responsive phone">
 				</div>
 			</div>
 		</div>
@@ -354,9 +355,15 @@
 				</div>
 				<div class="column text-right">
 					<ul>
-						<li><a href="#">Cookies</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Sitemap</a></li>
+						<li>
+							<a href="#">Cookies</a>
+						</li>
+						<li>
+							<a href="#">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="#">Sitemap</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -365,11 +372,16 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+	<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	
 	<script src="js/headroom.js"></script>
 	<script src="js/jQuery.headroom.js"></script>
 	<script async type="text/javascript" src="/js/scripts.js"></script>
+	<script>
+		sight();
+
+	</script>
 </body>
 
 </html>

@@ -4328,6 +4328,8 @@ a.text-error:focus, a.text-error:hover {
   background-color: #FAFAFA;
   border-bottom: #e7e9ed solid 1px;
   border-top: #e7e9ed solid 1px; }
+  .features .columns {
+    border: #e7e9ed 1px solid; }
   .features .section-title {
     padding-bottom: 2rem; }
   .features .panel {

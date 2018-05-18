@@ -1,8 +1,20 @@
-(function($, window, document, undefined) {
+(function ($, window, document, undefined) {
 	'use strict';
 
-	$(function() {
+	$(function () {
 		feather.replace();
+
+		window.sr = ScrollReveal({
+			reset: true
+		});
+		sr.reveal('.phone', {
+			viewFactor: 0.6
+		});
+		sr.reveal('.team-member', {
+			viewFactor: 0.3,
+			duration: 1000
+		}, 50);
+
 		$('header').headroom({
 			offset: 205,
 			tolerance: 5,
@@ -12,7 +24,7 @@
 				unpinned: 'slideUp'
 			}
 		});
-		$('.slider').on('init', function(event, slick) {
+		$('.slider').on('init', function (event, slick) {
 			var $items = slick.$dots.find('li');
 			$items.addClass('step-item');
 		});
@@ -28,7 +40,7 @@
 			appendDots: $('.journey-steps'),
 			dotsClass: 'step',
 			zIndex: 3,
-			customPaging: function(slider, i) {
+			customPaging: function (slider, i) {
 				var step = $(slider.$slides[i]).data('step');
 				var title = $(slider.$slides[i])
 					.find('.slide-title')
@@ -44,6 +56,6 @@
 			autoplaySpeed: 2000,
 			infinite: true,
 			arrows: false,
-		  });
+		});
 	});
 })(jQuery, window, document);
