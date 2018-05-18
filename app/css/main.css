@@ -4238,7 +4238,8 @@ a.text-error:focus, a.text-error:hover {
       -ms-flex-flow: column;
           flex-flow: column;
   padding: 4rem 0;
-  min-height: 30rem; }
+  min-height: 30rem;
+  background: url(../images/bg-1.png) white; }
   .journey .step {
     margin: 0.2rem auto;
     width: 70%; }
@@ -4360,15 +4361,15 @@ a.text-error:focus, a.text-error:hover {
           margin-top: 0.2rem; }
     .features .panel .panel-body ul {
       list-style-type: none; }
-      .features .panel .panel-body ul li:before {
-        content: "\f00c";
-        /* FontAwesome Unicode */
-        font-family: FontAwesome;
-        display: inline-block;
-        margin-left: -.75em;
-        /* same as padding-left set on li */
-        width: 1.5em;
-        /* same as padding-left set on li */ }
+      .features .panel .panel-body ul li {
+        text-indent: -1.25rem;
+        padding: 0 .6rem; }
+        .features .panel .panel-body ul li:before {
+          content: "\f00c";
+          font-family: FontAwesome;
+          width: 1.5em;
+          float: left;
+          margin-top: -.1rem; }
 
 .signup {
   background-image: url(../images/bg-2.png); }

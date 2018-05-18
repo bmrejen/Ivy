@@ -25,15 +25,16 @@
 		.panel-body {
 			ul {
 				list-style-type: none;
-				li:before {
-					content: "\f00c";
-					/* FontAwesome Unicode */
-					font-family: FontAwesome;
-					display: inline-block;
-					margin-left: -.75em;
-					/* same as padding-left set on li */
-					width: 1.5em;
-					/* same as padding-left set on li */
+				li {
+					text-indent: -1.25rem;
+					padding: 0 .6rem;
+					&:before {
+						content: "\f00c";
+						font-family: FontAwesome;
+						width: 1.5em;
+						float: left;
+						margin-top: -.1rem;
+					}
 				}
 			}
 		}
