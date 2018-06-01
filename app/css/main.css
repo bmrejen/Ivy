@@ -1,3 +1,6 @@
+.accent-color {
+  color: #d7263d; }
+
 .bg-white {
   background: white; }
 
@@ -4359,17 +4362,19 @@ a.text-error:focus, a.text-error:hover {
                 justify-content: space-between; }
         .features .panel .panel-header .panel-title .feather {
           margin-top: 0.2rem; }
-    .features .panel .panel-body ul {
-      list-style-type: none; }
-      .features .panel .panel-body ul li {
-        text-indent: -1.25rem;
-        padding: 0 .6rem; }
-        .features .panel .panel-body ul li:before {
-          content: "\f00c";
-          font-family: FontAwesome;
-          width: 1.5em;
-          float: left;
-          margin-top: -.1rem; }
+    .features .panel .panel-body {
+      font-size: 0.75rem; }
+      .features .panel .panel-body ul {
+        list-style-type: none; }
+        .features .panel .panel-body ul li {
+          text-indent: -1.25rem;
+          padding: 0 .6rem; }
+          .features .panel .panel-body ul li:before {
+            content: "\f00c";
+            font-family: FontAwesome;
+            width: 1.5em;
+            float: left;
+            margin-top: -.1rem; }
 
 .signup {
   background-image: url(../images/bg-2.png); }

@@ -11,6 +11,10 @@ $secondary-color: lighten($accent-color, 37.5%);
 $secondary-color-dark: darken($secondary-color, 3%);
 $secondary-color-light: lighten($secondary-color, 3%);
 
+.accent-color {
+  color: $accent-color;
+}
+
 // Backgrounds
 .bg-white {
 	background: white;
