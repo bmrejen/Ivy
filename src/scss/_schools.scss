@@ -25,3 +25,16 @@
 		}
 	}
 }
+
+.school-list {
+    padding: 3rem 0;
+    #filters {
+        .btn {
+            letter-spacing: 0;
+        }
+    }
+    .card {
+        float: left;
+        margin: 8px;
+    }
+}

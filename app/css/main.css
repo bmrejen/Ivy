@@ -271,7 +271,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 30rem;
   background-image: url(../images/hero.jpg);
   background-position: center;
   background-size: cover;
@@ -289,6 +288,10 @@ header {
     right: 0;
     left: 0;
     bottom: 0; }
+  .hero.main {
+    height: 30rem; }
+  .hero.schools {
+    height: 20rem; }
   .hero:after {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.15)));
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.15) 100%);
@@ -4321,6 +4324,14 @@ a.text-error:focus, a.text-error:hover {
             align-items: center; }
   .school-overview .school-grid .school-row img {
     margin: 1rem 2rem; }
+
+.school-list {
+  padding: 3rem 0; }
+  .school-list #filters .btn {
+    letter-spacing: 0; }
+  .school-list .card {
+    float: left;
+    margin: 8px; }
 
 .team {
   padding: 4rem 0; }
