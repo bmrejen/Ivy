@@ -4335,8 +4335,6 @@ a.text-error:focus, a.text-error:hover {
 
 .team {
   padding: 4rem 0; }
-  .team .section-title {
-    padding-bottom: 2rem; }
   .team .column {
     padding-left: 1.2rem;
     padding-right: 1.2rem; }
@@ -4349,6 +4347,17 @@ a.text-error:focus, a.text-error:hover {
     letter-spacing: 2px; }
   .team h2 {
     color: #212121; }
+
+.staff-row {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+  .staff-row .circle {
+    margin-top: 1rem;
+    max-width: 12rem; }
+
+.staff-column {
+  margin-top: 4rem;
+  margin-bottom: 1rem; }
 
 .features {
   padding: 4rem 0;

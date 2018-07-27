@@ -1,8 +1,5 @@
 .team {
     padding: 4rem 0;
-    .section-title {
-        padding-bottom: 2rem;
-    }
 	.column {
 		padding-left: $layout-spacing-lg;
 		padding-right: $layout-spacing-lg;
@@ -22,4 +19,18 @@
         color: $black;
     }
     
+}
+
+.staff-row {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    .circle {
+        margin-top: 1rem;
+        max-width: 12rem;
+    }
+}
+
+.staff-column {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 }
