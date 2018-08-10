@@ -4453,6 +4453,13 @@ a.text-error:focus, a.text-error:hover {
     .signup .signup-form [type='tel']:valid {
       border-bottom: solid 1px #04e762; }
 
+.faq {
+  padding: 4rem 0; }
+  .faq h2 {
+    color: #d7263d; }
+  .faq .divider {
+    margin: 2rem 0; }
+
 .footer {
   -webkit-box-shadow: 0px -3px 23px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px -3px 23px 0px rgba(0, 0, 0, 0.2);
