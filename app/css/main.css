@@ -260,6 +260,13 @@ header {
   .dropdown .menu:active {
     display: block; }
 
+.lang {
+  font-family: "Unica One", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  color: white;
+  text-transform: uppercase;
+  font-size: .8rem;
+  padding-left: 1rem; }
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -64,3 +64,11 @@ header {
 		display: block;
 	}
 }
+
+.lang {
+	font-family: $header-font-family;
+	color: white;
+	text-transform: uppercase;
+	font-size: .8rem;
+	padding-left: 1rem;
+}
