@@ -4493,11 +4493,17 @@ a.text-error:focus, a.text-error:hover {
   z-index: 10; }
   .contact-form .container {
     background: white;
-    padding: 2rem 2.4rem;
     -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.3);
             box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.3); }
     .contact-form .container .section-title {
       text-shadow: none; }
+    .contact-form .container .wrapper {
+      padding: 2rem 2.4rem; }
+    .contact-form .container .info {
+      background: #d7263d;
+      color: white; }
+      .contact-form .container .info a {
+        color: white; }
     .contact-form .container input[type="text"],
     .contact-form .container [type="email"],
     .contact-form .container [type="tel"] {

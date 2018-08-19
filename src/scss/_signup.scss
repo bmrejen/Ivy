@@ -62,11 +62,24 @@
 	z-index: 10;
 	.container {
 		background: white;
-		padding: 2rem 2.4rem;
 		box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.3);
 
 		.section-title {
 			text-shadow: none;
+		}
+
+		.wrapper {
+			padding: 2rem 2.4rem;
+		}
+
+		.info {
+			background: $accent-color;
+			color: white;
+			a {
+				color: white;
+			}
+
+			
 		}
 
 		input[type="text"],
