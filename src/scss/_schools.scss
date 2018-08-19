@@ -3,15 +3,18 @@
     align-items: center;
     justify-content: space-evenly;
     margin-top: auto;
+    img {
+        width: 180px;
+    }
 }
 
 .school-overview {
-    padding: 2rem 0;
+    padding: 3rem 0;
     background-color: #FAFAFA;
     border-bottom: $gray-color-light solid 1px;
     border-top: $gray-color-light solid 1px;
     .section-title {
-        margin-bottom: 0;
+        margin-bottom: 1rem;
     }
 	.school-grid {
 		.school-row {

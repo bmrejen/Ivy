@@ -8,6 +8,10 @@ header {
 	.btn.btn-link {
 		color: white;
   }
+  .navbar {
+	  padding-top: 1rem;
+	  padding-bottom: 1rem;
+  }
   &.animated.headroom--top {
     transition: background-color 0.3s ease !important;
     background-color: rgba(black, 0) !important;
@@ -71,4 +75,5 @@ header {
 	text-transform: uppercase;
 	font-size: .8rem;
 	padding-left: 1rem;
+	width: 6rem;
 }

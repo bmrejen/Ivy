@@ -16,101 +16,28 @@
 
 <body>
 
-	<header id="top" class="container py-4 headroom">
-		<div class="columns">
-			<div class="column">
-				<nav class="navbar mx-2">
-					<section class="navbar-section">
-						<a href="#" class="navbar-brand h1">Académie de France</a>
-					</section>
-					<section class="navbar-section">
-						<div class="dropdown dropdown-right">
-							<a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
-								Menu Item
-								<i class="icon icon-arrow-down"></i>
-							</a>
-							<ul class="menu">
-								<li class="menu-item">
-									<a href="">Link 1</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 2</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 3</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 4</a>
-								</li>
-							</ul>
-						</div>
-						<div class="dropdown dropdown-right">
-							<a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
-								Menu Item
-								<i class="icon icon-arrow-down"></i>
-							</a>
-							<ul class="menu">
-								<li class="menu-item">
-									<a href="">Link 1</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 2</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 3</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 4</a>
-								</li>
-							</ul>
-						</div>
-						<div class="dropdown dropdown-right">
-							<a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
-								Menu Item
-								<i class="icon icon-arrow-down"></i>
-							</a>
-							<ul class="menu">
-								<li class="menu-item">
-									<a href="">Link 1</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 2</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 3</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 4</a>
-								</li>
-							</ul>
-						</div>
-						<div class="dropdown dropdown-right">
-							<a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
-								Menu Item
-								<i class="icon icon-arrow-down"></i>
-							</a>
-							<ul class="menu">
-								<li class="menu-item">
-									<a href="">Link 1</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 2</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 3</a>
-								</li>
-								<li class="menu-item">
-									<a href="">Link 4</a>
-								</li>
-							</ul>
-						</div>
-						<button class="btn btn-primary mx-2">
-							<i data-feather="phone"></i> +86 156 1892 8329
-						</button>
+	<header id="top" class="py-4 headroom">
+		<div class="container grid-lg">
+			<div class="columns">
+				<div class="column">
+					<nav class="navbar">
+						<section class="navbar-section">
+							<a href="#" class="navbar-brand h1">Académie de France</a>
+						</section>
+						<section class="navbar-section">
+							<a class="btn btn-link" href="index.html">Home</a>
+							<a class="btn btn-link" href="schools.html">Schools</a>
+							<a class="btn btn-link" href="team.html">Our Judges</a>
+							<a class="btn btn-link" href="FAQ.html">FAQs</a>
+							<a class="btn btn-link" href="contact-us.html">Contact Us</a>
+							<button class="btn btn-primary mx-2">
+								<i data-feather="phone"></i> +86 156 1892 8329
+							</button>
 
-						<div class="lang">English | 中文</div>
-					</section>
-				</nav>
+							<div class="lang">English | 中文</div>
+						</section>
+					</nav>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -118,8 +45,8 @@
 		<div class="hero-lead">
 			<h1 class="">study smarter. faster. better.</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-			<btn class="btn-fancy btn-red btn-lg">
-				<i data-feather="calendar"></i> Book a meeting today</btn>
+			<button class="btn-fancy btn-red btn-lg">
+				<i data-feather="calendar"></i> Book a meeting today</button>
 		</div>
 	</section>
 
@@ -129,15 +56,15 @@
 				<h1 class="h3 text-center section-title">Schools We Support</h1>
 
 				<div id="filters" class="btn-group btn-group-block mb-4">
-					<btn class="btn btn-primary active" data-filter="*">Show All</btn>
-					<btn class="btn btn-primary" data-filter=".art">Art</btn>
-					<btn class="btn btn-primary" data-filter=".hotel">Hotel</btn>
-					<btn class="btn btn-primary" data-filter=".fashion">Fashion</btn>
-					<btn class="btn btn-primary" data-filter=":business">Business</btn>
-					<btn class="btn btn-primary" data-filter=".mba">MBA</btn>
-					<btn class="btn btn-primary" data-filter=".tourism">Tourism</btn>
-					<btn class="btn btn-primary" data-filter=".food">Food</btn>
-					<btn class="btn btn-primary" data-filter=".engineering">Engineering</btn>
+					<button class="btn btn-primary active" data-filter="*">Show All</button>
+					<button class="btn btn-primary" data-filter=".art">Art</button>
+					<button class="btn btn-primary" data-filter=".hotel">Hotel</button>
+					<button class="btn btn-primary" data-filter=".fashion">Fashion</button>
+					<button class="btn btn-primary" data-filter=":business">Business</button>
+					<button class="btn btn-primary" data-filter=".mba">MBA</button>
+					<button class="btn btn-primary" data-filter=".tourism">Tourism</button>
+					<button class="btn btn-primary" data-filter=".food">Food</button>
+					<button class="btn btn-primary" data-filter=".engineering">Engineering</button>
 				</div>
 
 				<div class="columns">
@@ -406,22 +333,24 @@
 
 	<footer class="footer">
 		<div class="container">
-			<div class="columns">
-				<div class="column">
-					<p>&copy; IVY CONSULTING 2018</p>
-				</div>
-				<div class="column text-right">
-					<ul>
-						<li>
-							<a href="#">Cookies</a>
-						</li>
-						<li>
-							<a href="#">Privacy Policy</a>
-						</li>
-						<li>
-							<a href="#">Sitemap</a>
-						</li>
-					</ul>
+			<div class="container grid-lg">
+				<div class="columns">
+					<div class="column">
+						<p>&copy; IVY CONSULTING 2018</p>
+					</div>
+					<div class="column text-right">
+						<ul>
+							<li>
+								<a href="#">Cookies</a>
+							</li>
+							<li>
+								<a href="#">Privacy Policy</a>
+							</li>
+							<li>
+								<a href="#">Sitemap</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
