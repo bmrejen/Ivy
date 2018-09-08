@@ -17,11 +17,11 @@ $secondary-color-light: lighten($secondary-color, 3%);
 
 // Backgrounds
 .bg-white {
-	background: white;
+  background: white;
 }
 .bg-accent {
-	background: $accent-color;
-	color: white;
+  background: $accent-color;
+  color: white;
 }
 
 // Typography

@@ -1,79 +1,85 @@
 header {
-	position: fixed;
-	z-index: 10;
-	right: 0;
-	left: 0;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
   top: 0;
-	a,
-	.btn.btn-link {
-		color: white;
+  background-color: white;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+
+  .btn.btn-link,
+  a {
+    color: #50596c;
   }
-  .navbar {
-	  padding-top: 1rem;
-	  padding-bottom: 1rem;
-  }
+
   &.animated.headroom--top {
     transition: background-color 0.3s ease !important;
-    background-color: rgba(black, 0) !important;
+    background-color: white !important;
+
     &.slideDown,
     &.slideUp {
       animation-name: none !important;
     }
   }
-	&.animated.slideDown,
-	&.animated.slideUp {
-		background-color: rgba(black, 0.6);
-	}
+
+  &.animated.slideDown,
+  &.animated.slideUp {
+    background-color: white;
+  }
 }
 
 .dropdown .icon {
-	font-size: 0.5rem;
-	vertical-align: 0% !important;
+  font-size: 0.5rem;
+  vertical-align: 0 !important;
 }
 
 .dropdown ul {
-	font-family: $header-font-family;
-	text-transform: uppercase;
+  font-family: $header-font-family;
+  text-transform: uppercase;
 }
 
 // Dropdown
 .dropdown {
-	display: inline-block;
-	position: relative;
-	.menu {
-		animation: slide-down 0.15s ease 1;
-		display: none;
-		left: 0;
-		max-height: 50vh;
-		overflow-y: auto;
-		position: absolute;
-		top: 100%;
-	}
-	&.dropdown-right {
-		.menu {
-			left: auto;
-			right: 0;
-		}
-	}
-	&.active .menu,
-	.dropdown-toggle:hover+.menu,
-	.menu:hover {
-		display: block;
-	}
-	&.menu:hover {
-		display: inherit;
-	}
-	&.dropdown-toggle:hover+.menu,
-	.menu:active {
-		display: block;
-	}
+  display: inline-block;
+  position: relative;
+
+  .menu {
+    animation: slide-down 0.15s ease 1;
+    display: none;
+    left: 0;
+    max-height: 50vh;
+    overflow-y: auto;
+    position: absolute;
+    top: 100%;
+  }
+
+  &.dropdown-right {
+    .menu {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &.active .menu,
+  .dropdown-toggle:hover+.menu,
+  .menu:hover {
+    display: block;
+  }
+
+  &.menu:hover {
+    display: inherit;
+  }
+
+  &.dropdown-toggle:hover+.menu,
+  .menu:active {
+    display: block;
+  }
 }
 
 .lang {
-	font-family: $header-font-family;
-	color: white;
-	text-transform: uppercase;
-	font-size: .8rem;
-	padding-left: 1rem;
-	width: 6rem;
+  font-family: $header-font-family;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+  width: 6rem;
 }

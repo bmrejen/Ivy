@@ -1,0 +1,115 @@
+.fl-fl {
+  background: $accent-color;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 8px;
+  width: 190px;
+  position: fixed;
+  right: -140px;
+  z-index: 1000;
+  font: normal normal 10px Arial;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.fa {
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 0;
+  width: 40px;
+  margin-left: 9px;
+}
+
+.fl-fl:hover {
+  right: 0;
+}
+
+.qr:hover {
+  right: -140px;
+  cursor: pointer;
+}
+
+.fl-fl a {
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 43px!important;
+  vertical-align: top!important;
+}
+
+.float-fb {
+  top: 160px;
+}
+
+.float-tw {
+  top: 220px;
+}
+
+.float-ig {
+  top: 280px;
+}
+
+.float-pn {
+  top: 340px;
+}
+
+.qr {
+  .tooltip {
+    background: rgba(0,0,0,.5);
+    bottom: 100%;
+    color: #fff;
+    display: block;
+    left: -230px;
+    margin-bottom: -55px;
+    opacity: 0;
+    padding: 8px;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(10px);
+    transition: all 0.25s ease-out;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.7);
+
+    img {
+      border: 1px solid rgba(0,0,0,.3);
+      box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    &:before {
+      bottom: -20px;
+      content: " ";
+      display: block;
+      height: 20px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &::after {
+      border-left: solid transparent 10px;
+      border-right: solid transparent 10px;
+      border-top: solid #1496bb 10px;
+      bottom: -10px;
+      content: " ";
+      height: 0;
+      left: 50%;
+      margin-left: -1px;
+      position: absolute;
+      width: 0;
+    }
+  }
+
+  &:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}

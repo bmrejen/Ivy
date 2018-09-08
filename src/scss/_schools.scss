@@ -1,43 +1,82 @@
 .schools {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: auto;
-    img {
-        width: 180px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: auto;
+
+  img {
+    width: 180px;
+  }
 }
 
 .school-overview {
-    padding: 3rem 0;
-    background-color: #FAFAFA;
-    border-bottom: $gray-color-light solid 1px;
-    border-top: $gray-color-light solid 1px;
-    .section-title {
-        margin-bottom: 1rem;
+  padding: 3rem 0;
+  background-color: #FAFAFA;
+  border-bottom: $gray-color-light solid 1px;
+  border-top: $gray-color-light solid 1px;
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .school-grid {
+    .school-row {
+      .slick-track {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        margin: 1rem 2rem;
+      }
     }
-	.school-grid {
-		.school-row {
-			.slick-track {
-				display: flex;
-				align-items: center;
-			}
-			img {
-				margin: 1rem 2rem;
-			}
-		}
-	}
+  }
 }
 
 .school-list {
-    padding: 3rem 0;
-    #filters {
-        .btn {
-            letter-spacing: 0;
-        }
+  padding: 3rem 0;
+}
+
+.school-info {
+  padding: 24px;
+}
+
+.filtr-item {
+  margin-top: 24px;
+}
+
+.card {
+  .card-image {
+    max-height: 7rem;
+    vertical-align: middle;
+    a {
+      height: 100%;
+      width: 100%;
     }
-    .card {
-        float: left;
-        margin: 8px;
+
+    img {
+      margin: 0 auto;
+      padding: 1rem;
+      max-height: 7rem;
+
     }
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbf5f3;
+    border-top: 1px solid #e5dfdd;
+    padding: 0.5rem 1rem !important;
+
+    .card-subtitle {
+      color: darken(#e5dfdd, 30);
+    }
+
+  }
+
+  .btn-red .icon {
+    color: white;
+  }
 }

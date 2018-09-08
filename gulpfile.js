@@ -65,11 +65,6 @@ gulp.task("js", function () {
     .pipe(sourcemaps.init())
     .pipe(jshint(".jshintrc"))
     .pipe(jshint.reporter("default"))
-    .pipe(
-      header(banner, {
-        package: package
-      })
-    )
     .pipe(gulp.dest("app/js"))
     .pipe(uglify())
     .on("error", function (err) {

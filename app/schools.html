@@ -1,373 +1,340 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Académie de France</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
-	 crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.min.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Académie de France</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+  </head>
 
-<body>
+  <body>
 
-	<header id="top" class="py-4 headroom">
-		<div class="container grid-lg">
-			<div class="columns">
-				<div class="column">
-					<nav class="navbar">
-						<section class="navbar-section">
-							<a href="#" class="navbar-brand h1">Académie de France</a>
-						</section>
-						<section class="navbar-section">
-							<a class="btn btn-link" href="index.html">Home</a>
-							<a class="btn btn-link" href="schools.html">Schools</a>
-							<a class="btn btn-link" href="team.html">Our Judges</a>
-							<a class="btn btn-link" href="FAQ.html">FAQs</a>
-							<a class="btn btn-link" href="contact-us.html">Contact Us</a>
-							<button class="btn btn-primary mx-2">
-								<i data-feather="phone"></i> +86 156 1892 8329
-							</button>
+    <header id="top" class="py-4 headroom">
+      <div class="container grid-lg">
+        <div class="columns">
+          <div class="column">
+            <nav class="navbar">
+              <section class="navbar-section">
+                <a href="#" class="navbar-brand"><img src="images/logo.svg" alt=""></a>
+              </section>
+              <section class="navbar-section">
+                <a class="btn btn-link" href="index.html">Home</a>
+                <a class="btn btn-link" href="schools.html">Schools</a>
+                <a class="btn btn-link" href="team.html">Our Judges</a>
+                <a class="btn btn-link" href="FAQ.html">FAQs</a>
+                <a class="btn btn-link" href="contact-us.html">Contact Us</a>
+                <button class="btn btn-primary mx-2">
+                <i data-feather="phone"></i> +86 156 1892 8329
+              </button>
 
-							<div class="lang">English | 中文</div>
-						</section>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
-	<section class="hero schools full-width text-center">
-		<div class="hero-lead">
-			<h1 class="">study smarter. faster. better.</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-			<button class="btn-fancy btn-red btn-lg">
-				<i data-feather="calendar"></i> Book a meeting today</button>
-		</div>
-	</section>
+                <div class="lang">English | 中文</div>
+              </section>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero schools full-width text-center">
+      <div class="hero-lead">
+        <h1 class="">study smarter. faster. better.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+        <a href="contact-us.html" class="btn-fancy btn-red btn-lg">
+      <i data-feather="calendar"></i> Book a meeting today
+      </a>
+      </div>
+    </section>
 
-	<section class="container grid-lg school-list">
-		<div class="columns">
-			<div class="column col-12">
-				<h1 class="h3 text-center section-title">Schools We Support</h1>
+    <section class="container grid-lg school-list">
+      <div class="columns">
+        <div class="column col-12">
+          <h1 class="h3 text-center section-title">Schools We Support</h1>
 
-				<div id="filters" class="btn-group btn-group-block mb-4">
-					<button class="btn btn-primary active" data-filter="*">Show All</button>
-					<button class="btn btn-primary" data-filter=".art">Art</button>
-					<button class="btn btn-primary" data-filter=".hotel">Hotel</button>
-					<button class="btn btn-primary" data-filter=".fashion">Fashion</button>
-					<button class="btn btn-primary" data-filter=":business">Business</button>
-					<button class="btn btn-primary" data-filter=".mba">MBA</button>
-					<button class="btn btn-primary" data-filter=".tourism">Tourism</button>
-					<button class="btn btn-primary" data-filter=".food">Food</button>
-					<button class="btn btn-primary" data-filter=".engineering">Engineering</button>
-				</div>
+          <div id="filters" class="btn-group btn-group-block mb-4 filter-buttons">
+            <button class="btn btn-primary filter-btn active" data-filter="all">Show All</button>
+            <button class="btn btn-primary filter-btn" data-filter="art">Art</button>
+            <button class="btn btn-primary filter-btn" data-filter="hot">Hotel</button>
+            <button class="btn btn-primary filter-btn" data-filter="fash">Fashion</button>
+            <button class="btn btn-primary filter-btn" data-filter="bus">Business</button>
+            <button class="btn btn-primary filter-btn" data-filter="mba">MBA</button>
+            <button class="btn btn-primary filter-btn" data-filter="tour">Tourism</button>
+            <button class="btn btn-primary filter-btn" data-filter="food">Food</button>
+            <button class="btn btn-primary filter-btn" data-filter="eng">Engineering</button>
+          </div>
 
-				<div class="columns">
-					<div class="column col-12">
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/centrale_de_lille.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://centralelille.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">École centrale de Lille</div>
-								<div class="card-subtitle text-gray">Villeneuve-d'Ascq</div>
-							</div>
-						</div>
+          <div class="grid columns">
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/centrale_supelec.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.centralesupelec.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">CentraleSupélec</div>
-								<div class="card-subtitle text-gray">Gif-sur-Yvette, Rennes</div>
-							</div>
-						</div>
+            <div class="column col-4 filtr-item bus">
+              <div class="card">
+                <div class="card-image">
+                  <a class="trigger" href="/schools/n.html"><img src="schools/logos/n.png" class="img-responsive"></a>
+                </div>
+                <div class="card-header">
+                  <div class="title-block">
+                    <div class="card-title h5">N+I 项目</div>
+                    <div class="card-subtitle">50多所工程师学院联盟</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/centrale_de_lyon.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.ec-lyon.fr/en" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">École centrale de Lyon</div>
-								<div class="card-subtitle text-gray">Écully</div>
-							</div>
-						</div>
+            <div class="column col-4 filtr-item eng">
+              <div class="card">
+                <div class="card-image">
+                  <a class="trigger" href="/schools/sai.html"><img src="schools/logos/sai.png" class="img-responsive"></a>
+                </div>
+                <div class="card-header">
+                  <div class="title-block">
+                    <div class="card-title h5">SAI 项目</div>
+                    <div class="card-subtitle">五所著名商学院联盟</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/centrale_marseille.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.centrale-marseille.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">Centrale de Marseille</div>
-								<div class="card-subtitle text-gray">Marseille</div>
-							</div>
-						</div>
+            <div class="column col-4 filtr-item eng">
+              <div class="card">
+                <div class="card-image">
+                  <a class="trigger" href="/schools/centrale_supelec.html"><img src="schools/logos/centrale_supelec.jpg" class="img-responsive"></a>
+                </div>
+                <div class="card-header">
+                  <div class="title-block">
+                    <div class="card-title h5">CentraleSupélec</div>
+                    <div class="card-subtitle">巴黎中央理工高等电力学院</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/centrale_nantes.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="https://www.ec-nantes.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">École centrale de Nantes</div>
-								<div class="card-subtitle text-gray">Nantes</div>
-							</div>
-						</div>
+            <div class="column col-4 filtr-item bus">
+              <div class="card">
+                <div class="card-image">
+                  <a class="trigger" href="/schools/HEC.html"><img src="schools/logos/hec-bg.jpg" class="img-responsive"></a>
+                </div>
+                <div class="card-header">
+                  <div class="title-block">
+                    <div class="card-title h5">HEC</div>
+                    <div class="card-subtitle">巴黎高等商学院</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_arts_at_metiers.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.ensam.eu/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">Arts et Métiers ParisTech</div>
-								<div class="card-subtitle text-gray">Paris</div>
-							</div>
-						</div>
+            <div class="column col-4 filtr-item bus">
+              <div class="card">
+                <div class="card-image">
+                  <a class="trigger" href="/schools/ESSEC.html"><img src="schools/logos/essec-bg.jpg" class="img-responsive"></a>
+                </div>
+                <div class="card-header">
+                  <div class="title-block">
+                    <div class="card-title h5">ESSEC</div>
+                    <div class="card-subtitle">ESSEC商学院</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_chimie.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.chimie-paristech.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">Chimie ParisTech</div>
-								<div class="card-subtitle text-gray">Paris</div>
-							</div>
-						</div>
+            <div class="column col-4 filtr-item bus">
+              <div class="card">
+                <div class="card-image">
+                  <a class="trigger" href="/schools/ESCP.html"><img src="schools/logos/ESCP.jpg" class="img-responsive"></a>
+                </div>
+                <div class="card-header">
+                  <div class="title-block">
+                    <div class="card-title h5">ESCP</div>
+                    <div class="card-subtitle">欧洲高等商学院</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_ensae.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.ensae.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">ENSAE ParisTech</div>
-								<div class="card-subtitle text-gray">Palaiseau</div>
-							</div>
-						</div>
+            <div class="column col-4 filtr-item bus">
+              <div class="card">
+                <div class="card-image">
+                  <a class="trigger" href="/schools/EMLYON.html"><img src="schools/logos/emlyon.png" class="img-responsive"></a>
+                </div>
+                <div class="card-header">
+                  <div class="title-block">
+                    <div class="card-title h5">EM LYON</div>
+                    <div class="card-subtitle">里昂商学院</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_des_ponts.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.enpc.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">École des Ponts</div>
-								<div class="card-subtitle text-gray">Champs-sur-Marne</div>
-							</div>
-						</div>
+            <div class="column col-4 filtr-item bus">
+              <div class="card">
+                <div class="card-image">
+                  <a class="trigger" href="/schools/skema.html"><img src="schools/logos/skema.png" class="img-responsive"></a>
+                </div>
+                <div class="card-header">
+                  <div class="title-block">
+                    <div class="card-title h5">SKEMA</div>
+                    <div class="card-subtitle">SKEMA商学院</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_isae.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="https://www.isae-supaero.fr/en" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">ISAE-SUPAERO</div>
-								<div class="card-subtitle text-gray">Toulouse</div>
-							</div>
-						</div>
+            <div class="column col-4 filtr-item bus">
+              <div class="card">
+                <div class="card-image">
+                  <a class="trigger" href="/schools/edhec.html"><img src="schools/logos/EDHEC.png" class="img-responsive"></a>
+                </div>
+                <div class="card-header">
+                  <div class="title-block">
+                    <div class="card-title h5">EDHEC</div>
+                    <div class="card-subtitle">北方商学院</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_ensta.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.ensta-paristech.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">ENSTA ParisTech</div>
-								<div class="card-subtitle text-gray">Palaiseau</div>
-							</div>
-						</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_mines.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.mines-paristech.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">MINES ParisTech</div>
-								<div class="card-subtitle text-gray">Paris</div>
-							</div>
-						</div>
+    <section class="signup bg-primary">
+      <div class="container grid-lg">
+        <div class="columns">
+          <div class="column signup-form">
+            <h1 class="h3 section-title">Let's Get the Future Started</h1>
+            <form action="#" method="post" id="contact_form" class="form-horizontal">
+              <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="My name is" name="name" id="name_input" required>
+            </div>
+                <div class="email">
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_telecom.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.telecom-paristech.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">Télécom ParisTech</div>
-								<div class="card-subtitle text-gray">Paris</div>
-							</div>
-						</div>
+                  <label for="email"></label>
+                  <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+              required>
+            </div>
+                  <div class="telephone">
+                    <label for="name"></label>
+                    <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required>
+            </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_polytechnique.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://polytechnique.edu/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">École Polytechnique</div>
-								<div class="card-subtitle text-gray">Palaiseau</div>
-							</div>
-						</div>
+                    <div class="submit">
+                      <btn type="submit" value="Send Message" class="btn-fancy btn-red btn-lg">
+                        <i data-feather="calendar"></i> Book a meeting today
+                      </btn>
+                    </div>
+            </form>
+          </div>
+          <div class="column">
+            <img src="images/phone.png" alt="" class="img-responsive phone">
+        </div>
+          </div>
+        </div>
+    </section>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_espci.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.espci.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">ESPCI Paris</div>
-								<div class="card-subtitle text-gray">Paris</div>
-							</div>
-						</div>
+    <footer class="footer">
+      <div class="container">
+        <div class="container grid-lg">
+          <div class="columns">
+            <div class="column">
+              <p>&copy; IVY CONSULTING 2018 | ICP XXXXXXXXXX</p>
+            </div>
+            <div class="column text-right">
+              <ul>
+                <li>
+                  <a href="#">Cookies</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Sitemap</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_SupOptique.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.institutoptique.fr/index_uk.jsp" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">Institut d'optique</div>
-								<div class="card-subtitle text-gray">Saint-Etienne, Bordeaux</div>
-							</div>
-						</div>
+    <div id="modal-iframe">
+      <!-- data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home" -->
+      <!-- Modal content -->
+    </div>
 
-						<div class="card engineering">
-							<div class="card-image">
-								<img src="images/schools/bg/paristech_AgroParisTech.jpg" class="img-responsive">
-							</div>
-							<div class="card-header">
-								<a class="btn btn-primary float-right" href="http://www.agroparistech.fr/" target="_blank">
-									<i class="icon icon-link"></i>
-								</a>
-								<div class="card-title h5">AgroParisTech</div>
-								<div class="card-subtitle text-gray">Paris</div>
-							</div>
-						</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <script src="js/headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script async type="text/javascript" src="/js/scripts.js"></script>
+    <script>
+      $(document).on('click', '.trigger', function(event) {
+        event.preventDefault();
+        $("#modal-iframe").iziModal({
+          iframe: true,
+          iframeHeight: 600,
+          title: 'School Info',
+          headerColor: '#0d86d9',
+          bodyOverflow: true,
+          width: 800,
+          transitionIn: 'fadeIn'
+        });
+        $('#modal-iframe').iziModal('open', event);
+      });
 
-	<section class="signup bg-primary">
-		<div class="container grid-lg">
-			<div class="columns">
-				<div class="column signup-form">
-					<h1 class="h3 section-title">Let's Get the Future Started</h1>
-					<form action="#" method="post" id="contact_form" class="form-horizontal">
-						<div class="name">
-							<label for="name"></label>
-							<input type="text" placeholder="My name is" name="name" id="name_input" required>
-						</div>
-						<div class="email">
-
-							<label for="email"></label>
-							<input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-							 required>
-						</div>
-						<div class="telephone">
-							<label for="name"></label>
-							<input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required>
-						</div>
-
-						<div class="submit">
-							<btn type="submit" value="Send Message" class="btn-fancy btn-red btn-lg">
-								<i data-feather="calendar"></i> Book a meeting today
-							</btn>
-						</div>
-					</form>
-				</div>
-				<div class="column">
-					<img src="images/phone.png" alt="" class="img-responsive phone">
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<footer class="footer">
-		<div class="container">
-			<div class="container grid-lg">
-				<div class="columns">
-					<div class="column">
-						<p>&copy; IVY CONSULTING 2018</p>
-					</div>
-					<div class="column text-right">
-						<ul>
-							<li>
-								<a href="#">Cookies</a>
-							</li>
-							<li>
-								<a href="#">Privacy Policy</a>
-							</li>
-							<li>
-								<a href="#">Sitemap</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-1.9.1.min.js"></script>
-	<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-	<script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
-	<script src="js/headroom.js"></script>
-	<script src="js/jQuery.headroom.js"></script>
-	<script async type="text/javascript" src="/js/scripts.js"></script>
-	<script>
-		sight();
-
-	</script>
-</body>
+      class FilterGallery {
+        constructor() {
+          this.$filtermenuList = $('.filter-buttons button');
+          this.$container = $('.grid');
+          this.updateMenu('all');
+          this.$filtermenuList.on('click', $.proxy(this.onClickFilterMenu, this));
+        }
+        onClickFilterMenu(event) {
+          const $target = $(event.target);
+          const targetFilter = $target.data('filter');
+          this.updateMenu(targetFilter);
+          this.updateGallery(targetFilter);
+        }
+        updateMenu(targetFilter) {
+          this.$filtermenuList.removeClass('active');
+          this.$filtermenuList.each((index, element) => {
+            const targetData = $(element).data('filter');
+            if (targetData === targetFilter) {
+              $(element).addClass('active');
+            }
+          })
+        }
+        updateGallery(targetFilter) {
+          if (targetFilter === 'all') {
+            this.$container.fadeOut(300, () => {
+              $('.filtr-item').show();
+              this.$container.fadeIn();
+            });
+          } else {
+            this.$container.find('.filtr-item').each((index, element) => {
+              this.$container.fadeOut(300, () => {
+                if ($(element).hasClass(targetFilter)) {
+                  $(element).show();
+                } else {
+                  $(element).hide();
+                }
+                this.$container.fadeIn();
+              })
+            });
+          }
+        }
+      }
+      const fliterGallery = new FilterGallery();
+      sight();
+    </script>
+  </body>
 
 </html>

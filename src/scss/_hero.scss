@@ -1,41 +1,41 @@
 .hero {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background-image: url(../images/hero.jpg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: relative;
-	color: white;
-	z-index: 1;
-	@include dark-overlay;
-	&.main {
-		height: 30rem;
-	}
-	&.schools {
-		height: 20rem;
-	}
-	&.contact-us {
-		height: 30rem;
-	}
-	&:after {
-		background: linear-gradient(
-			to bottom,
-			rgba(0, 0, 0, 0.6) 10%,
-			rgba(0, 0, 0, 0.15) 100%
-		);
-	}
-	.hero-lead {
-		/*margin-top: auto;*/
-		h1 {
-			font-size: $font-size * 4;
-			padding-top: 1.6rem;
-			margin-bottom: 0.25rem;
-			@include text-shadow;
-		}
-		button {
-			letter-spacing: 0.125rem;
-		}
-	}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  z-index: 1;
+  @include dark-overlay;
+  &.main {
+    height: 30rem;
+  }
+  &.schools {
+    height: 20rem;
+  }
+  &.contact-us {
+    height: 30rem;
+  }
+  &:after {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 10%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+  }
+  .hero-lead {
+    /*margin-top: auto;*/
+    h1 {
+      font-size: $font-size * 4;
+      padding-top: 1.6rem;
+      margin-bottom: 0.25rem;
+      @include text-shadow;
+    }
+    button {
+      letter-spacing: 0.125rem;
+    }
+  }
 }

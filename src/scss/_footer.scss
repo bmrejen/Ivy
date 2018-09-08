@@ -1,31 +1,31 @@
 .footer {
-	width: 100%;
-	box-shadow: 0px -3px 23px 0px rgba(0, 0, 0, 0.2);
-	.container
-	.column {
-		align-items: center;
-	}
-	font-family: $header-font-family;
-	text-transform: uppercase;
-	p {
-		margin: $unit-4 $unit-4 $unit-4 0;
-		padding: 0;
-	}
-	ul {
-		margin: 0.8rem 0;
-		li {
-			text-align: center;
-			display: inline-block;
-			margin-top: 0;
-			margin-left: 1rem;
-		}
-	}
-	&.contact-us {
-		box-shadow: none;
-	}
+  width: 100%;
+  box-shadow: 0px -3px 23px 0px rgba(0, 0, 0, 0.2);
+  .container
+  .column {
+    align-items: center;
+  }
+  font-family: $header-font-family;
+  text-transform: uppercase;
+  p {
+    margin: $unit-4 $unit-4 $unit-4 0;
+    padding: 0;
+  }
+  ul {
+    margin: 0.8rem 0;
+    li {
+      text-align: center;
+      display: inline-block;
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+  }
+  &.contact-us {
+    box-shadow: none;
+  }
 
-	&.contact-us {
-		position: absolute;
-		bottom: 0;
-	}
+  &.contact-us {
+    position: relative;
+    bottom: 0;
+  }
 }

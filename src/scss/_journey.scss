@@ -1,65 +1,65 @@
 // Journey Slider
 .journey {
-	display: flex;
-	justify-content: center;
-	flex-flow: column;
-	padding: 4rem 0;
-	min-height: 30rem;
-	background: url(../images/bg-1.png) white;
-	.step {
-		margin: $unit-1 auto;
-		width: 70%;
-		.step-item {
-			a {
-				cursor: pointer;
-			}
-			&.slick-active {
-				a {
-					color: $primary-color;
-					&::before {
-						background: $light-color;
-						border: $border-width-lg solid $primary-color;
-					}
-				}
-				&~.step-item {
-					&::before {
-						background: $border-color;
-					}
-					a {
-						&::before {
-							background: $gray-color-light;
-						}
-					}
-				}
-			}
-		}
-	}
-	.slider {
-		padding: 2rem 0;
-		max-width: $size-lg;
-		.slide {
-			display: flex;
-			align-items: stretch;
-			height: 22rem;
-		}
-		.overlay {
-			color: white;
-			background-color: $accent-color;
-			display: flex;
-			flex-flow: column;
-			justify-content: center;
-			align-items: flex-start;
-			padding: 0 $layout-spacing * 4;
-		}
-	}
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 4rem 0;
+  min-height: 30rem;
+  background: url(../images/bg-1.png) white;
+  .step {
+    margin: $unit-1 auto;
+    width: 70%;
+    .step-item {
+      a {
+        cursor: pointer;
+      }
+      &.slick-active {
+        a {
+          color: $primary-color;
+          &::before {
+            background: $light-color;
+            border: $border-width-lg solid $primary-color;
+          }
+        }
+        &~.step-item {
+          &::before {
+            background: $border-color;
+          }
+          a {
+            &::before {
+              background: $gray-color-light;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slider {
+    padding: 2rem 0;
+    max-width: $size-lg;
+    .slide {
+      display: flex;
+      align-items: stretch;
+      height: 22rem;
+    }
+    .overlay {
+      color: white;
+      background-color: $accent-color;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 $layout-spacing * 4;
+    }
+  }
 }
 
 // Tooltips
 .tooltip {
-	text-transform: uppercase;
-	font-family: $header-font-family;
+  text-transform: uppercase;
+  font-family: $header-font-family;
 }
 
 .icon-plane svg path {
-	fill: $primary-color !important;
+  fill: $primary-color !important;
 }
