@@ -1,340 +1,930 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Académie de France</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Académie de France</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+</head>
 
-  <body>
+<body>
 
-    <header id="top" class="py-4 headroom">
-      <div class="container grid-lg">
-        <div class="columns">
-          <div class="column">
-            <nav class="navbar">
-              <section class="navbar-section">
-                <a href="#" class="navbar-brand"><img src="images/logo.svg" alt=""></a>
-              </section>
-              <section class="navbar-section">
-                <a class="btn btn-link" href="index.html">Home</a>
-                <a class="btn btn-link" href="schools.html">Schools</a>
-                <a class="btn btn-link" href="team.html">Our Judges</a>
-                <a class="btn btn-link" href="FAQ.html">FAQs</a>
-                <a class="btn btn-link" href="contact-us.html">Contact Us</a>
-                <button class="btn btn-primary mx-2">
-                <i data-feather="phone"></i> +86 156 1892 8329
+  <header id="top" class="py-4 headroom">
+    <div class="container grid-lg">
+      <div class="columns">
+        <div class="column">
+          <nav class="navbar">
+            <section class="navbar-section">
+              <a href="#" class="navbar-brand"><img src="images/logo.svg" alt=""></a>
+            </section>
+            <section class="navbar-section">
+              <a class="btn btn-link" href="index.html">Home</a>
+              <a class="btn btn-link" href="schools.html">Schools</a>
+              <a class="btn btn-link" href="team.html">Our Judges</a>
+              <a class="btn btn-link" href="FAQ.html">FAQs</a>
+              <a class="btn btn-link" href="contact-us.html">Contact Us</a>
+              <button class="btn btn-primary mx-2">
+                <i data-feather="phone"></i>
+                +86 156 1892 8329
               </button>
 
-                <div class="lang">English | 中文</div>
-              </section>
-            </nav>
-          </div>
+              <div class="lang d-hide">English | 中文</div>
+            </section>
+          </nav>
         </div>
       </div>
-    </header>
-    <section class="hero schools full-width text-center">
-      <div class="hero-lead">
-        <h1 class="">study smarter. faster. better.</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-        <a href="contact-us.html" class="btn-fancy btn-red btn-lg">
-      <i data-feather="calendar"></i> Book a meeting today
+    </div>
+  </header>
+  <section class="hero schools full-width text-center">
+    <div class="hero-lead">
+      <h1 class="">study smarter. faster. better.</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+      <a href="contact-us.html" class="btn-fancy btn-red btn-lg">
+        <i data-feather="calendar"></i>
+        Book a meeting today
       </a>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="container grid-lg school-list">
-      <div class="columns">
-        <div class="column col-12">
-          <h1 class="h3 text-center section-title">Schools We Support</h1>
+  <section class="container grid-lg school-list">
+    <div class="columns">
+      <div class="column col-12">
+        <h1 class="h3 text-center section-title">Schools We Support</h1>
 
-          <div id="filters" class="btn-group btn-group-block mb-4 filter-buttons">
-            <button class="btn btn-primary filter-btn active" data-filter="all">Show All</button>
-            <button class="btn btn-primary filter-btn" data-filter="art">Art</button>
-            <button class="btn btn-primary filter-btn" data-filter="hot">Hotel</button>
-            <button class="btn btn-primary filter-btn" data-filter="fash">Fashion</button>
-            <button class="btn btn-primary filter-btn" data-filter="bus">Business</button>
-            <button class="btn btn-primary filter-btn" data-filter="mba">MBA</button>
-            <button class="btn btn-primary filter-btn" data-filter="tour">Tourism</button>
-            <button class="btn btn-primary filter-btn" data-filter="food">Food</button>
-            <button class="btn btn-primary filter-btn" data-filter="eng">Engineering</button>
+        <div id="filters" class="btn-group btn-group-block mb-4 filter-buttons">
+          <button class="btn btn-primary filter-btn active" data-filter="all">Show All</button>
+          <button class="btn btn-primary filter-btn" data-filter="bus">Business</button>
+          <button class="btn btn-primary filter-btn" data-filter="art">Art/Architecture</button>
+          <button class="btn btn-primary filter-btn" data-filter="pub">Public/Government</button>
+          <button class="btn btn-primary filter-btn" data-filter="sch">Scholarships</button>
+          <button class="btn btn-primary filter-btn" data-filter="eng">Engineering</button>
+        </div>
+
+        <div class="grid columns">
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/n.html"><img src="schools/logos/n.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">N+I 项目</div>
+                  <div class="card-subtitle">50多所工程师学院联盟</div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="grid columns">
-
-            <div class="column col-4 filtr-item bus">
-              <div class="card">
-                <div class="card-image">
-                  <a class="trigger" href="/schools/n.html"><img src="schools/logos/n.png" class="img-responsive"></a>
-                </div>
-                <div class="card-header">
-                  <div class="title-block">
-                    <div class="card-title h5">N+I 项目</div>
-                    <div class="card-subtitle">50多所工程师学院联盟</div>
-                  </div>
+          <div class="column col-4 filtr-item eng">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/sai.html"><img src="schools/logos/sai.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">SAI 项目</div>
+                  <div class="card-subtitle">五所著名商学院联盟</div>
                 </div>
               </div>
             </div>
-
-            <div class="column col-4 filtr-item eng">
-              <div class="card">
-                <div class="card-image">
-                  <a class="trigger" href="/schools/sai.html"><img src="schools/logos/sai.png" class="img-responsive"></a>
-                </div>
-                <div class="card-header">
-                  <div class="title-block">
-                    <div class="card-title h5">SAI 项目</div>
-                    <div class="card-subtitle">五所著名商学院联盟</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column col-4 filtr-item eng">
-              <div class="card">
-                <div class="card-image">
-                  <a class="trigger" href="/schools/centrale_supelec.html"><img src="schools/logos/centrale_supelec.jpg" class="img-responsive"></a>
-                </div>
-                <div class="card-header">
-                  <div class="title-block">
-                    <div class="card-title h5">CentraleSupélec</div>
-                    <div class="card-subtitle">巴黎中央理工高等电力学院</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column col-4 filtr-item bus">
-              <div class="card">
-                <div class="card-image">
-                  <a class="trigger" href="/schools/HEC.html"><img src="schools/logos/hec-bg.jpg" class="img-responsive"></a>
-                </div>
-                <div class="card-header">
-                  <div class="title-block">
-                    <div class="card-title h5">HEC</div>
-                    <div class="card-subtitle">巴黎高等商学院</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column col-4 filtr-item bus">
-              <div class="card">
-                <div class="card-image">
-                  <a class="trigger" href="/schools/ESSEC.html"><img src="schools/logos/essec-bg.jpg" class="img-responsive"></a>
-                </div>
-                <div class="card-header">
-                  <div class="title-block">
-                    <div class="card-title h5">ESSEC</div>
-                    <div class="card-subtitle">ESSEC商学院</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column col-4 filtr-item bus">
-              <div class="card">
-                <div class="card-image">
-                  <a class="trigger" href="/schools/ESCP.html"><img src="schools/logos/ESCP.jpg" class="img-responsive"></a>
-                </div>
-                <div class="card-header">
-                  <div class="title-block">
-                    <div class="card-title h5">ESCP</div>
-                    <div class="card-subtitle">欧洲高等商学院</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column col-4 filtr-item bus">
-              <div class="card">
-                <div class="card-image">
-                  <a class="trigger" href="/schools/EMLYON.html"><img src="schools/logos/emlyon.png" class="img-responsive"></a>
-                </div>
-                <div class="card-header">
-                  <div class="title-block">
-                    <div class="card-title h5">EM LYON</div>
-                    <div class="card-subtitle">里昂商学院</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column col-4 filtr-item bus">
-              <div class="card">
-                <div class="card-image">
-                  <a class="trigger" href="/schools/skema.html"><img src="schools/logos/skema.png" class="img-responsive"></a>
-                </div>
-                <div class="card-header">
-                  <div class="title-block">
-                    <div class="card-title h5">SKEMA</div>
-                    <div class="card-subtitle">SKEMA商学院</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column col-4 filtr-item bus">
-              <div class="card">
-                <div class="card-image">
-                  <a class="trigger" href="/schools/edhec.html"><img src="schools/logos/EDHEC.png" class="img-responsive"></a>
-                </div>
-                <div class="card-header">
-                  <div class="title-block">
-                    <div class="card-title h5">EDHEC</div>
-                    <div class="card-subtitle">北方商学院</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
+
+          <div class="column col-4 filtr-item eng">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/centrale_supelec.html"><img src="schools/logos/centrale_supelec.jpg"
+                    class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">CentraleSupélec</div>
+                  <div class="card-subtitle">巴黎中央理工高等电力学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/HEC.html"><img src="schools/logos/hec-bg.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">HEC</div>
+                  <div class="card-subtitle">巴黎高等商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/ESSEC.html"><img src="schools/logos/essec-bg.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">ESSEC</div>
+                  <div class="card-subtitle">ESSEC商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/ESCP.html"><img src="schools/logos/ESCP.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">ESCP</div>
+                  <div class="card-subtitle">欧洲高等商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/EMLYON.html"><img src="schools/logos/emlyon.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">EM LYON</div>
+                  <div class="card-subtitle">里昂商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/skema.html"><img src="schools/logos/skema.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">SKEMA</div>
+                  <div class="card-subtitle">SKEMA商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/edhec.html"><img src="schools/logos/EDHEC.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">EDHEC</div>
+                  <div class="card-subtitle">北方商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/grenoble.html"><img src="schools/logos/gem.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">GEM</div>
+                  <div class="card-subtitle">格勒诺布尔高商</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/audencia.html"><img src="schools/logos/audencia.svg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">AUDENCIA</div>
+                  <div class="card-subtitle">南特商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/mbs.html"><img src="schools/logos/mbs.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">MBS</div>
+                  <div class="card-subtitle">蒙彼利埃商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item eng">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/mines.html"><img src="schools/logos/mines.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">IMT Atlantique</div>
+                  <div class="card-subtitle">原南特矿业+布列塔尼电信</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item eng">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/isep.html"><img src="schools/logos/isep.svg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">ISEP</div>
+                  <div class="card-subtitle">巴黎高等电子学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item eng">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/esilv.html"><img src="schools/logos/esilv.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">ESILV</div>
+                  <div class="card-subtitle">达芬奇高等工程师学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item eng">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/enac.html"><img src="schools/logos/enac.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">ENAC</div>
+                  <div class="card-subtitle">法国国立民用航空学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item eng">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/paristech.html"><img src="schools/logos/paristech.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">ParisTech</div>
+                  <div class="card-subtitle">巴黎高科项目</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item eng">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/imt.html"><img src="schools/logos/imt.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">IMT</div>
+                  <div class="card-subtitle">矿业-电信大学联盟</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/autograf.html"><img src="schools/logos/autograf.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Autograf</div>
+                  <div class="card-subtitle">巴黎高等艺术设计学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/lisaa.html"><img src="schools/logos/lisaa.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">LISAA</div>
+                  <div class="card-subtitle">高等艺术应用设计学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/nantes.html"><img src="schools/logos/nantes.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Nantes Atlantique</div>
+                  <div class="card-subtitle">南特-大西洋设计学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/IESA.html"><img src="schools/logos/IESA.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">IESA</div>
+                  <div class="card-subtitle">巴黎高等文化艺术管理学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/istituto.html"><img src="schools/logos/Istituto Marangoni.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Istituto Marangoni</div>
+                  <div class="card-subtitle">南特-马兰欧尼时装与设计学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/IESA_M.html"><img src="schools/logos/IESA_M.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">IESA Multimedia</div>
+                  <div class="card-subtitle">IESA多媒体学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/CLCF.html"><img src="schools/logos/CLCF.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">CLCF</div>
+                  <div class="card-subtitle">法国自由电影学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/hetic.html"><img src="schools/logos/hetic.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Hetic</div>
+                  <div class="card-subtitle">高等信息技术和视觉传达学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/strate.html"><img src="schools/logos/strate.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Strate</div>
+                  <div class="card-subtitle">斯特拉斯特设计学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/florent.html"><img src="schools/logos/florent.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Cours Florent</div>
+                  <div class="card-subtitle">佛罗朗戏剧学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/webschool.html"><img src="schools/logos/webschool.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">La Web School</div>
+                  <div class="card-subtitle">网络数字技术学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/atelier.html"><img src="schools/logos/atelier.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Atelier Chardon Savard</div>
+                  <div class="card-subtitle">ACS 时装设计学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/campusart.html"><img src="schools/logos/campusart.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">CampusArt</div>
+                  <div class="card-subtitle">艺术直通车项目</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item art">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/dap.html"><img src="schools/logos/dap.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">DAP Jaune</div>
+                  <div class="card-subtitle">建筑类院校程序</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item pub">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/hors.html"><img src="schools/logos/hors.png" class="img-responsive no-padding"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Hors DAP</div>
+                  <div class="card-subtitle">公立大学程序</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item pub">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/sciencespo.html"><img src="schools/logos/SciencesPoParis.gif" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Sciences Po Paris</div>
+                  <div class="card-subtitle">巴黎政治学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item pub">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/sciencepo.html"><img src="schools/logos/sciencespo.png" class="img-responsive no-padding"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Sciences Po</div>
+                  <div class="card-subtitle">政治学院联考</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item sch">
+            <div class="card">
+              <div class="card-image">
+                <img src="schools/logos/eiffel.jpg" class="img-responsive">
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">埃菲尔奖学金</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item sch">
+            <div class="card">
+              <div class="card-image">
+                <img src="schools/logos/renault.png" class="img-responsive">
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">企业奖学金</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item sch">
+            <div class="card">
+              <div class="card-image">
+                <img src="schools/logos/region.gif" class="img-responsive">
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">地区奖学金</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item sch">
+            <div class="card">
+              <div class="card-image">
+                <img src="schools/logos/iledefrance.png" class="img-responsive">
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">政府奖学金</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item sch">
+            <div class="card">
+              <div class="card-image">
+                <img src="schools/logos/hec-bg.jpg" class="img-responsive">
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">校级奖学金</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/rsb.html"><img src="schools/logos/rsb.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">RSB</div>
+                  <div class="card-subtitle">雷恩商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/tbs.html"><img src="schools/logos/tbs.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">TBS</div>
+                  <div class="card-subtitle">图卢兹商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/bsb.html"><img src="schools/logos/bsb.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">BSB</div>
+                  <div class="card-subtitle">勃艮第商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/psb.html"><img src="schools/logos/psb.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">PSB</div>
+                  <div class="card-subtitle">巴黎商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/mbaesg.html"><img src="schools/logos/mbaesg.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">MBA ESG</div>
+                  <div class="card-subtitle">巴黎高等管理硕士学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/emlv.html"><img src="schools/logos/emlv.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">EMLV</div>
+                  <div class="card-subtitle">达芬奇经济管理学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/BBS.html"><img src="schools/logos/BBS.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">BBS</div>
+                  <div class="card-subtitle">布雷斯特商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/pass.html"><img src="schools/logos/pass.png" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Pass-World项目</div>
+                  <div class="card-subtitle">六所知名商学院联盟</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/vatel.html"><img src="schools/logos/vatel.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">VATEL</div>
+                  <div class="card-subtitle">瓦岱勒国际酒店与旅游管理商学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 filtr-item bus">
+            <div class="card">
+              <div class="card-image">
+                <a class="trigger" href="/schools/roches.html"><img src="schools/logos/lesroches.jpg" class="img-responsive"></a>
+              </div>
+              <div class="card-header">
+                <div class="title-block">
+                  <div class="card-title h5">Les Roches</div>
+                  <div class="card-subtitle">瑞士理诺士酒店管理学院</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="signup bg-primary">
+  <section class="signup bg-primary">
+    <div class="container grid-lg">
+      <div class="columns">
+        <div class="column signup-form">
+          <h1 class="h3 section-title">Let's Get the Future Started</h1>
+          <form action="#" method="post" id="contact_form" class="form-horizontal">
+            <div class="name">
+              <label for="name"></label>
+              <input type="text" placeholder="My name is" name="name" id="name_input" required="required">
+            </div>
+            <div class="email">
+
+              <label for="email"></label>
+              <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+                required="required">
+            </div>
+            <div class="telephone">
+              <label for="name"></label>
+              <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required="required">
+            </div>
+
+            <div class="submit">
+              <btn type="submit" value="Send Message" class="btn-fancy btn-red btn-lg">
+                <i data-feather="calendar"></i>
+                Book a meeting today
+              </btn>
+            </div>
+          </form>
+        </div>
+        <div class="column">
+          <img src="images/phone.png" alt="" class="img-responsive phone">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
       <div class="container grid-lg">
         <div class="columns">
-          <div class="column signup-form">
-            <h1 class="h3 section-title">Let's Get the Future Started</h1>
-            <form action="#" method="post" id="contact_form" class="form-horizontal">
-              <div class="name">
-                <label for="name"></label>
-                <input type="text" placeholder="My name is" name="name" id="name_input" required>
-            </div>
-                <div class="email">
-
-                  <label for="email"></label>
-                  <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-              required>
-            </div>
-                  <div class="telephone">
-                    <label for="name"></label>
-                    <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required>
-            </div>
-
-                    <div class="submit">
-                      <btn type="submit" value="Send Message" class="btn-fancy btn-red btn-lg">
-                        <i data-feather="calendar"></i> Book a meeting today
-                      </btn>
-                    </div>
-            </form>
-          </div>
           <div class="column">
-            <img src="images/phone.png" alt="" class="img-responsive phone">
-        </div>
+            <p>&copy; IVY CONSULTING 2018 | ICP XXXXXXXXXX</p>
           </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="container grid-lg">
-          <div class="columns">
-            <div class="column">
-              <p>&copy; IVY CONSULTING 2018 | ICP XXXXXXXXXX</p>
-            </div>
-            <div class="column text-right">
-              <ul>
-                <li>
-                  <a href="#">Cookies</a>
-                </li>
-                <li>
-                  <a href="#">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#">Sitemap</a>
-                </li>
-              </ul>
-            </div>
+          <div class="column text-right">
+            <ul>
+              <li>
+                <a href="#">Cookies</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
-
-    <div id="modal-iframe">
-      <!-- data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home" -->
-      <!-- Modal content -->
     </div>
+  </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
-    <script src="js/filter.js"></script>
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <div id="modal-iframe">
+    <!-- data-iziModal-fullscreen="true" data-iziModal-title="Welcome" data-iziModal-subtitle="Subtitle" data-iziModal-icon="icon-home" -->
+    <!-- Modal content -->
+  </div>
 
-    <script src="js/headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script async type="text/javascript" src="/js/scripts.js"></script>
-    <script>
-      $(document).on('click', '.trigger', function(event) {
-        event.preventDefault();
-        $("#modal-iframe").iziModal({
-          iframe: true,
-          iframeHeight: 600,
-          title: 'School Info',
-          headerColor: '#0d86d9',
-          bodyOverflow: true,
-          width: 800,
-          transitionIn: 'fadeIn'
-        });
-        $('#modal-iframe').iziModal('open', event);
+  <div class="float-sm">
+    <div class="fl-fl float-fb">
+      <i class="fa fa-facebook"></i>
+      <a href="" target="_blank"> Like us!</a>
+    </div>
+    <div class="fl-fl float-tw">
+      <i class="fa fa-twitter"></i>
+      <a href="" target="_blank">Follow us!</a>
+    </div>
+    <div class="fl-fl float-ig">
+      <i class="fa fa-instagram"></i>
+      <a href="" target="_blank">Follow us!</a>
+    </div>
+    <div class="fl-fl float-pn qr">
+      <i class="fa fa-pinterest"></i>
+      <div class="tooltip"><img src="images/qr.png" /></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+  <script src="js/headroom.js"></script>
+  <script src="js/jQuery.headroom.js"></script>
+  <script async="async" type="text/javascript" src="/js/scripts.js"></script>
+  <script>
+    $(document).on('click', '.trigger', function (event) {
+      event.preventDefault();
+      $("#modal-iframe").iziModal({
+        iframe: true,
+        iframeHeight: 600,
+        title: 'School Info',
+        headerColor: '#0d86d9',
+        bodyOverflow: true,
+        width: 800,
+        transitionIn: 'fadeIn'
       });
-
-      class FilterGallery {
-        constructor() {
-          this.$filtermenuList = $('.filter-buttons button');
-          this.$container = $('.grid');
-          this.updateMenu('all');
-          this.$filtermenuList.on('click', $.proxy(this.onClickFilterMenu, this));
-        }
-        onClickFilterMenu(event) {
-          const $target = $(event.target);
-          const targetFilter = $target.data('filter');
-          this.updateMenu(targetFilter);
-          this.updateGallery(targetFilter);
-        }
-        updateMenu(targetFilter) {
-          this.$filtermenuList.removeClass('active');
-          this.$filtermenuList.each((index, element) => {
-            const targetData = $(element).data('filter');
-            if (targetData === targetFilter) {
-              $(element).addClass('active');
-            }
-          })
-        }
-        updateGallery(targetFilter) {
-          if (targetFilter === 'all') {
-            this.$container.fadeOut(300, () => {
-              $('.filtr-item').show();
-              this.$container.fadeIn();
-            });
-          } else {
-            this.$container.find('.filtr-item').each((index, element) => {
-              this.$container.fadeOut(300, () => {
-                if ($(element).hasClass(targetFilter)) {
-                  $(element).show();
-                } else {
-                  $(element).hide();
-                }
-                this.$container.fadeIn();
-              })
-            });
+      $('#modal-iframe').iziModal('open', event);
+    });
+    class FilterGallery {
+      constructor() {
+        this.$filtermenuList = $('.filter-buttons button');
+        this.$container = $('.grid');
+        this.updateMenu('all');
+        this.$filtermenuList.on('click', $.proxy(this.onClickFilterMenu, this));
+      }
+      onClickFilterMenu(event) {
+        const $target = $(event.target);
+        const targetFilter = $target.data('filter');
+        this.updateMenu(targetFilter);
+        this.updateGallery(targetFilter);
+      }
+      updateMenu(targetFilter) {
+        this.$filtermenuList.removeClass('active');
+        this.$filtermenuList.each((index, element) => {
+          const targetData = $(element).data('filter');
+          if (targetData === targetFilter) {
+            $(element).addClass('active');
           }
+        })
+      }
+      updateGallery(targetFilter) {
+        if (targetFilter === 'all') {
+          this.$container.fadeOut(300, () => {
+            $('.filtr-item').show();
+            this.$container.fadeIn();
+          });
+        } else {
+          this.$container.find('.filtr-item').each((index, element) => {
+            this.$container.fadeOut(300, () => {
+              if ($(element).hasClass(targetFilter)) {
+                $(element).show();
+              } else {
+                $(element).hide();
+              }
+              this.$container.fadeIn();
+            })
+          });
         }
       }
-      const fliterGallery = new FilterGallery();
-      sight();
-    </script>
-  </body>
+    }
+    const fliterGallery = new FilterGallery();
+    sight();
+
+  </script>
+</body>
 
 </html>

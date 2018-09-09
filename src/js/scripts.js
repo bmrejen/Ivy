@@ -1,6 +1,8 @@
 (function ($, window, document, undefined) {
   'use strict';
 
+  feather.replace();
+
   $(function () {
     $('a[href*="#"]').on('click', function (e) {
       e.preventDefault();
@@ -10,9 +12,8 @@
       }, 500, 'linear');
     });
 
-    feather.replace();
 
-    window.sr = ScrollReveal({
+    window.sr = new ScrollReveal({
       reset: true
     });
     sr.reveal('.phone', {

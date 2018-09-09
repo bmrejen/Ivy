@@ -4411,6 +4411,8 @@ a.text-error:visited {
     margin: 0 auto;
     padding: 1rem;
     max-height: 7rem; }
+    .card .card-image img.no-padding {
+      padding: 0; }
 
 .card .card-header {
   display: -webkit-box;
