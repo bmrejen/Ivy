@@ -3,32 +3,42 @@
   background-color: #FAFAFA;
   border-bottom: $gray-color-light solid 1px;
   border-top: $gray-color-light solid 1px;
+
   .columns {
     border: $gray-color-light 1px solid;
   }
+
   .section-title {
     padding-bottom: 2rem;
   }
+
   .panel {
     border: none;
     border-radius: 0;
+
     .panel-header {
       padding-bottom: 0;
+
       .panel-title {
         display: flex;
         justify-content: space-between;
+
         .feather {
           margin-top: 0.2rem;
         }
       }
     }
+
     .panel-body {
       font-size: 0.75rem;
+
       ul {
         list-style-type: none;
+
         li {
           text-indent: -1.25rem;
           padding: 0 .6rem;
+
           &:before {
             content: "\f00c";
             font-family: FontAwesome;
@@ -38,6 +48,32 @@
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .features {
+    padding: 0;
+    padding-top: 2rem;
+
+    .container {
+      padding: 0;
+    }
+
+    .section-title {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .features {
+    padding: 0;
+    padding-top: 2rem;
+
+    .container {
+      padding: 0;
     }
   }
 }

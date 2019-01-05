@@ -2,54 +2,80 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Académie de France</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avé France</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="bookmark" href="/favicon.ico" />
+  <script src="https://unpkg.com/i18next/i18next.js"></script>
 </head>
 
 <body>
-
-  <header id="top" class="py-4 headroom">
+  <header class="main_header navbar hide-md">
     <div class="container grid-lg">
       <div class="columns">
-        <div class="column">
-          <nav class="navbar">
-            <section class="navbar-section">
-              <a href="#" class="navbar-brand"><img src="images/logo.svg" alt=""></a>
-            </section>
-            <section class="navbar-section">
-              <a class="btn btn-link" href="index.html">Home</a>
-              <a class="btn btn-link" href="schools.html">Schools</a>
-              <a class="btn btn-link" href="team.html">Our Judges</a>
-              <a class="btn btn-link" href="FAQ.html">FAQs</a>
-              <a class="btn btn-link" href="contact-us.html">Contact Us</a>
-              <button class="btn btn-primary mx-2">
-                <i data-feather="phone"></i>
-                +86 156 1892 8329
+        <div class="column d-inline-flex hide-md">
+          <section class="navbar-section">
+            <a href="index.html" class="navbar-brand"><img src="images/logo.png" class="header-logo img-responsive" /></a>
+          </section>
+          <section class="navbar-section">
+            <section class="navbar-section header-menu">
+              <a class="btn btn-link" id="home" href="index.html">主页</a>
+              <a class="btn btn-link" id="schools" href="schools.html">了解学校</a>
+              <a class="btn btn-link" id="judges" href="team.html">我们的陪审官导师</a>
+              <a class="btn btn-link" id="faqs" href="FAQ.html">常见问题</a>
+              <a class="btn btn-link" id="contact" href="contact-us.html">联系我们</a>
+              <button class="btn btn-primary mx-2" style="width: 190px;">
+                <i data-feather="phone"></i> +86 156 1892 8329
               </button>
 
-              <div class="lang d-hide">English | 中文</div>
+              <div class="lang">
+                <span onclick="changeLng('en')">English</span> |
+                <span onclick="changeLng('zh')">中文</span>
+              </div>
             </section>
-          </nav>
+
+          </section>
         </div>
       </div>
     </div>
   </header>
+
+  <header class="main_header navbar show-md">
+    <nav role="navigation" id="nav">
+      <input class="trigger" type="checkbox" id="mainNavButton">
+      <label for="mainNavButton" onclick><img src="images/logo-white.png" class="header-logo img-responsive" /></label>
+
+      <ul>
+        <li><a id="home" href="index.html">主页</a></li>
+        <li><a id="schools" href="schools.html">了解学校</a></li>
+        <li><a id="judges" href="team.html">我们的陪审官导师</a></li>
+        <li><a id="faqs" href="FAQ.html">常见问题</a></li>
+        <li><a id="contact" href="contact-us.html">联系我们</a></li>
+        <li class="lang">Select Language:
+          <span onclick="changeLng('en')">English</span> |
+          <span onclick="changeLng('zh')">中文</span>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
   <section class="hero schools full-width text-center">
     <div class="hero-lead">
-      <h1 class="">study smarter. faster. better.</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+      <h1 id="YOURSAFESTWAYTOFRANCE">为您的留法之路保驾护航</h1>
+      <p id="YOURSAFESTWAYTOFRANCEDetail">来自真正的大学面试评审团的指导</p>
       <a href="contact-us.html" class="btn-fancy btn-red btn-lg">
-        <i data-feather="calendar"></i>
-        Book a meeting today
+        <i data-feather="calendar"></i> Book a meeting today
       </a>
     </div>
   </section>
@@ -60,20 +86,31 @@
         <h1 class="h3 text-center section-title">Schools We Support</h1>
 
         <div id="filters" class="btn-group btn-group-block mb-4 filter-buttons">
-          <button class="btn btn-primary filter-btn active" data-filter="all">Show All</button>
-          <button class="btn btn-primary filter-btn" data-filter="bus">Business</button>
-          <button class="btn btn-primary filter-btn" data-filter="art">Art/Architecture</button>
-          <button class="btn btn-primary filter-btn" data-filter="pub">Public/Government</button>
-          <button class="btn btn-primary filter-btn" data-filter="sch">Scholarships</button>
-          <button class="btn btn-primary filter-btn" data-filter="eng">Engineering</button>
+          <button class="btn btn-primary filter-btn active" data-filter="all">
+            Show All
+          </button>
+          <button class="btn btn-primary filter-btn" data-filter="bus">
+            Business
+          </button>
+          <button class="btn btn-primary filter-btn" data-filter="art">
+            Art/Architecture
+          </button>
+          <button class="btn btn-primary filter-btn" data-filter="pub">
+            Public/Government
+          </button>
+          <button class="btn btn-primary filter-btn" data-filter="sch">
+            Scholarships
+          </button>
+          <button class="btn btn-primary filter-btn" data-filter="eng">
+            Engineering
+          </button>
         </div>
 
         <div class="grid columns">
-
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/n.html"><img src="schools/logos/n.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/n.html"><img src="schools/logos/n.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -84,10 +121,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item eng">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item eng">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/sai.html"><img src="schools/logos/sai.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/sai.html"><img src="schools/logos/sai.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -98,11 +135,11 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item eng">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item eng">
             <div class="card">
               <div class="card-image">
                 <a class="trigger" href="/schools/centrale_supelec.html"><img src="schools/logos/centrale_supelec.jpg"
-                    class="img-responsive"></a>
+                    class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -113,10 +150,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/HEC.html"><img src="schools/logos/hec-bg.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/HEC.html"><img src="schools/logos/hec-bg.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -127,10 +164,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/ESSEC.html"><img src="schools/logos/essec-bg.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/ESSEC.html"><img src="schools/logos/essec-bg.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -141,10 +178,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/ESCP.html"><img src="schools/logos/ESCP.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/ESCP.html"><img src="schools/logos/ESCP.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -155,10 +192,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/EMLYON.html"><img src="schools/logos/emlyon.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/EMLYON.html"><img src="schools/logos/emlyon.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -169,10 +206,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/skema.html"><img src="schools/logos/skema.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/skema.html"><img src="schools/logos/skema.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -183,10 +220,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/edhec.html"><img src="schools/logos/EDHEC.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/edhec.html"><img src="schools/logos/EDHEC.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -197,10 +234,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/grenoble.html"><img src="schools/logos/gem.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/grenoble.html"><img src="schools/logos/gem.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -211,10 +248,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/audencia.html"><img src="schools/logos/audencia.svg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/audencia.html"><img src="schools/logos/audencia.svg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -225,10 +262,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/mbs.html"><img src="schools/logos/mbs.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/mbs.html"><img src="schools/logos/mbs.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -239,10 +276,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item eng">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item eng">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/mines.html"><img src="schools/logos/mines.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/mines.html"><img src="schools/logos/mines.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -253,10 +290,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item eng">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item eng">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/isep.html"><img src="schools/logos/isep.svg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/isep.html"><img src="schools/logos/isep.svg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -267,10 +304,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item eng">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item eng">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/esilv.html"><img src="schools/logos/esilv.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/esilv.html"><img src="schools/logos/esilv.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -281,10 +318,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item eng">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item eng">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/enac.html"><img src="schools/logos/enac.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/enac.html"><img src="schools/logos/enac.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -295,10 +332,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item eng">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item eng">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/paristech.html"><img src="schools/logos/paristech.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/paristech.html"><img src="schools/logos/paristech.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -309,10 +346,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item eng">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item eng">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/imt.html"><img src="schools/logos/imt.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/imt.html"><img src="schools/logos/imt.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -323,10 +360,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/autograf.html"><img src="schools/logos/autograf.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/autograf.html"><img src="schools/logos/autograf.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -337,10 +374,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/lisaa.html"><img src="schools/logos/lisaa.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/lisaa.html"><img src="schools/logos/lisaa.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -351,10 +388,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/nantes.html"><img src="schools/logos/nantes.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/nantes.html"><img src="schools/logos/nantes.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -365,10 +402,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/IESA.html"><img src="schools/logos/IESA.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/IESA.html"><img src="schools/logos/IESA.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -379,10 +416,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/istituto.html"><img src="schools/logos/Istituto Marangoni.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/istituto.html"><img src="schools/logos/Istituto Marangoni.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -393,10 +430,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/IESA_M.html"><img src="schools/logos/IESA_M.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/IESA_M.html"><img src="schools/logos/IESA_M.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -407,10 +444,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/CLCF.html"><img src="schools/logos/CLCF.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/CLCF.html"><img src="schools/logos/CLCF.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -421,10 +458,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/hetic.html"><img src="schools/logos/hetic.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/hetic.html"><img src="schools/logos/hetic.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -435,10 +472,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/strate.html"><img src="schools/logos/strate.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/strate.html"><img src="schools/logos/strate.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -449,10 +486,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/florent.html"><img src="schools/logos/florent.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/florent.html"><img src="schools/logos/florent.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -463,10 +500,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/webschool.html"><img src="schools/logos/webschool.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/webschool.html"><img src="schools/logos/webschool.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -477,10 +514,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/atelier.html"><img src="schools/logos/atelier.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/atelier.html"><img src="schools/logos/atelier.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -491,10 +528,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/campusart.html"><img src="schools/logos/campusart.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/campusart.html"><img src="schools/logos/campusart.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -505,10 +542,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item art">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item art">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/dap.html"><img src="schools/logos/dap.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/dap.html"><img src="schools/logos/dap.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -519,10 +556,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item pub">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item pub">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/hors.html"><img src="schools/logos/hors.png" class="img-responsive no-padding"></a>
+                <a class="trigger" href="/schools/hors.html"><img src="schools/logos/hors.png" class="img-responsive no-padding" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -533,10 +570,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item pub">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item pub">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/sciencespo.html"><img src="schools/logos/SciencesPoParis.gif" class="img-responsive"></a>
+                <a class="trigger" href="/schools/sciencespo.html"><img src="schools/logos/SciencesPoParis.gif" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -547,10 +584,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item pub">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item pub">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/sciencepo.html"><img src="schools/logos/sciencespo.png" class="img-responsive no-padding"></a>
+                <a class="trigger" href="/schools/sciencepo.html"><img src="schools/logos/sciencespo.png" class="img-responsive no-padding" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -561,10 +598,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item sch">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item sch">
             <div class="card">
               <div class="card-image">
-                <img src="schools/logos/eiffel.jpg" class="img-responsive">
+                <img src="schools/logos/eiffel.jpg" class="img-responsive" />
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -574,10 +611,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item sch">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item sch">
             <div class="card">
               <div class="card-image">
-                <img src="schools/logos/renault.png" class="img-responsive">
+                <img src="schools/logos/renault.png" class="img-responsive" />
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -587,10 +624,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item sch">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item sch">
             <div class="card">
               <div class="card-image">
-                <img src="schools/logos/region.gif" class="img-responsive">
+                <img src="schools/logos/region.gif" class="img-responsive" />
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -600,10 +637,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item sch">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item sch">
             <div class="card">
               <div class="card-image">
-                <img src="schools/logos/iledefrance.png" class="img-responsive">
+                <img src="schools/logos/iledefrance.png" class="img-responsive" />
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -613,10 +650,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item sch">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item sch">
             <div class="card">
               <div class="card-image">
-                <img src="schools/logos/hec-bg.jpg" class="img-responsive">
+                <img src="schools/logos/hec-bg.jpg" class="img-responsive" />
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -626,10 +663,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/rsb.html"><img src="schools/logos/rsb.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/rsb.html"><img src="schools/logos/rsb.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -640,10 +677,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/tbs.html"><img src="schools/logos/tbs.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/tbs.html"><img src="schools/logos/tbs.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -654,10 +691,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/bsb.html"><img src="schools/logos/bsb.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/bsb.html"><img src="schools/logos/bsb.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -668,10 +705,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/psb.html"><img src="schools/logos/psb.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/psb.html"><img src="schools/logos/psb.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -682,10 +719,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/mbaesg.html"><img src="schools/logos/mbaesg.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/mbaesg.html"><img src="schools/logos/mbaesg.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -696,10 +733,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/emlv.html"><img src="schools/logos/emlv.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/emlv.html"><img src="schools/logos/emlv.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -710,10 +747,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/BBS.html"><img src="schools/logos/BBS.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/BBS.html"><img src="schools/logos/BBS.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -724,10 +761,10 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/pass.html"><img src="schools/logos/pass.png" class="img-responsive"></a>
+                <a class="trigger" href="/schools/pass.html"><img src="schools/logos/pass.png" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -738,24 +775,26 @@
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/vatel.html"><img src="schools/logos/vatel.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/vatel.html"><img src="schools/logos/vatel.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
                   <div class="card-title h5">VATEL</div>
-                  <div class="card-subtitle">瓦岱勒国际酒店与旅游管理商学院</div>
+                  <div class="card-subtitle">
+                    瓦岱勒国际酒店与旅游管理商学院
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="column col-4 filtr-item bus">
+          <div class="column col-4 col-xs-12 col-sm-6 filtr-item bus">
             <div class="card">
               <div class="card-image">
-                <a class="trigger" href="/schools/roches.html"><img src="schools/logos/lesroches.jpg" class="img-responsive"></a>
+                <a class="trigger" href="/schools/roches.html"><img src="schools/logos/lesroches.jpg" class="img-responsive" /></a>
               </div>
               <div class="card-header">
                 <div class="title-block">
@@ -765,7 +804,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -776,32 +814,28 @@
       <div class="columns">
         <div class="column signup-form">
           <h1 class="h3 section-title">Let's Get the Future Started</h1>
-          <form action="#" method="post" id="contact_form" class="form-horizontal">
-            <div class="name">
-              <label for="name"></label>
-              <input type="text" placeholder="My name is" name="name" id="name_input" required="required">
-            </div>
-            <div class="email">
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="My name is" name="name" id="name_input" required />
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+              required />
+          </div>
+          <div class="telephone">
+            <label for="name"></label>
+            <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required />
+          </div>
 
-              <label for="email"></label>
-              <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-                required="required">
-            </div>
-            <div class="telephone">
-              <label for="name"></label>
-              <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required="required">
-            </div>
-
-            <div class="submit">
-              <btn type="submit" value="Send Message" class="btn-fancy btn-red btn-lg">
-                <i data-feather="calendar"></i>
-                Book a meeting today
-              </btn>
-            </div>
-          </form>
+          <div class="submit">
+            <button class="btn-fancy btn-red btn-lg" onclick="sendEmail()">
+              <i data-feather="calendar"></i> Book a meeting today
+            </button>
+          </div>
         </div>
-        <div class="column">
-          <img src="images/phone.png" alt="" class="img-responsive phone">
+        <div class="column phone hide-sm">
+          <img src="images/phone.png" alt="" class="img-responsive phone" />
         </div>
       </div>
     </div>
@@ -816,15 +850,9 @@
           </div>
           <div class="column text-right">
             <ul>
-              <li>
-                <a href="#">Cookies</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Sitemap</a></li>
             </ul>
           </div>
         </div>
@@ -838,21 +866,16 @@
   </div>
 
   <div class="float-sm">
-    <div class="fl-fl float-fb">
-      <i class="fa fa-facebook"></i>
-      <a href="" target="_blank"> Like us!</a>
+    <div class="fl-fl float-phone">
+      <i class="fa fa-phone"></i><span>+86 156 1892 8329</span>
     </div>
-    <div class="fl-fl float-tw">
-      <i class="fa fa-twitter"></i>
-      <a href="" target="_blank">Follow us!</a>
+    <div class="fl-fl float-wechat qr">
+      <i class="fa fa-wechat"></i>
+      <div class="tooltip"><img src="images/qr1.jpg" /></div>
     </div>
-    <div class="fl-fl float-ig">
-      <i class="fa fa-instagram"></i>
-      <a href="" target="_blank">Follow us!</a>
-    </div>
-    <div class="fl-fl float-pn qr">
-      <i class="fa fa-pinterest"></i>
-      <div class="tooltip"><img src="images/qr.png" /></div>
+    <div class="fl-fl float-users qr">
+      <i class="fa fa-users"></i>
+      <div class="tooltip"><img src="images/qr2.jpeg" /></div>
     </div>
   </div>
 
@@ -866,49 +889,52 @@
   <script src="js/jQuery.headroom.js"></script>
   <script async="async" type="text/javascript" src="/js/scripts.js"></script>
   <script>
-    $(document).on('click', '.trigger', function (event) {
+    $(document).on("click", ".trigger", function (event) {
       event.preventDefault();
       $("#modal-iframe").iziModal({
         iframe: true,
         iframeHeight: 600,
-        title: 'School Info',
-        headerColor: '#0d86d9',
+        title: "School Info",
+        headerColor: "#0d86d9",
         bodyOverflow: true,
         width: 800,
-        transitionIn: 'fadeIn'
+        transitionIn: "fadeIn"
       });
-      $('#modal-iframe').iziModal('open', event);
+      $("#modal-iframe").iziModal("open", event);
     });
     class FilterGallery {
       constructor() {
-        this.$filtermenuList = $('.filter-buttons button');
-        this.$container = $('.grid');
-        this.updateMenu('all');
-        this.$filtermenuList.on('click', $.proxy(this.onClickFilterMenu, this));
+        this.$filtermenuList = $(".filter-buttons button");
+        this.$container = $(".grid");
+        this.updateMenu("all");
+        this.$filtermenuList.on(
+          "click",
+          $.proxy(this.onClickFilterMenu, this)
+        );
       }
       onClickFilterMenu(event) {
         const $target = $(event.target);
-        const targetFilter = $target.data('filter');
+        const targetFilter = $target.data("filter");
         this.updateMenu(targetFilter);
         this.updateGallery(targetFilter);
       }
       updateMenu(targetFilter) {
-        this.$filtermenuList.removeClass('active');
+        this.$filtermenuList.removeClass("active");
         this.$filtermenuList.each((index, element) => {
-          const targetData = $(element).data('filter');
+          const targetData = $(element).data("filter");
           if (targetData === targetFilter) {
-            $(element).addClass('active');
+            $(element).addClass("active");
           }
-        })
+        });
       }
       updateGallery(targetFilter) {
-        if (targetFilter === 'all') {
+        if (targetFilter === "all") {
           this.$container.fadeOut(300, () => {
-            $('.filtr-item').show();
+            $(".filtr-item").show();
             this.$container.fadeIn();
           });
         } else {
-          this.$container.find('.filtr-item').each((index, element) => {
+          this.$container.find(".filtr-item").each((index, element) => {
             this.$container.fadeOut(300, () => {
               if ($(element).hasClass(targetFilter)) {
                 $(element).show();
@@ -916,13 +942,22 @@
                 $(element).hide();
               }
               this.$container.fadeIn();
-            })
+            });
           });
         }
       }
     }
     const fliterGallery = new FilterGallery();
-    sight();
+    // sight();
+
+  </script>
+  <script src="js/i18next.js"></script>
+  <script>
+    function sendEmail() {
+      let name = `My_name_is_${document.getElementById("name_input").value}`;
+      let phone = `${document.getElementById("telephone_input").value}`;
+      window.location.href = `mailto:info@avefrance.cn?subject=${name}&body=${phone}`;
+    }
 
   </script>
 </body>

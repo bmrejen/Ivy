@@ -165,15 +165,75 @@
   border-radius: 4px;
   margin-top: 1rem;
   margin-bottom: 2rem;
+
   .d-flex {
     align-items: center;
     justify-content: center;
     padding: 1rem;
+
     a {
       color: white;
     }
+
     p {
       margin: 0;
     }
+  }
+}
+
+.hidden-qr {
+  .section-title {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .signup-form {
+    padding: 2rem !important;
+  }
+
+  .contact-form {
+    margin-top: 4rem;
+    z-index: 0;
+
+    .container {
+      box-shadow: none;
+
+      .wrapper {
+        padding: 1.2rem 0 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .signup-form {
+    padding: 3rem 2rem !important;
+    &.contact-page {
+      padding: 0;
+      .form {
+        padding: 1rem 1.25rem 1.6rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .signup-form {
+    padding: 3rem 1rem;
+  }
+
+  .phone {
+    display: flex;
+    align-items: flex-end;
+  }
+  .quote {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .signup-form {
+    padding: 2rem;
   }
 }

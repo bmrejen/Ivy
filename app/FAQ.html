@@ -2,51 +2,75 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Académie de France</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
-  crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avé France</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+  <script src="https://unpkg.com/i18next/i18next.js"></script>
 </head>
 
 <body>
-
-  <header id="top" class="py-4 headroom">
+  <header class="main_header navbar hide-md">
     <div class="container grid-lg">
       <div class="columns">
-        <div class="column">
-          <nav class="navbar">
-            <section class="navbar-section">
-              <a href="#" class="navbar-brand"><img src="images/logo.svg" alt=""></a>
-            </section>
-            <section class="navbar-section">
-              <a class="btn btn-link" href="index.html">Home</a>
-              <a class="btn btn-link" href="schools.html">Schools</a>
-              <a class="btn btn-link" href="team.html">Our Judges</a>
-              <a class="btn btn-link" href="FAQ.html">FAQs</a>
-              <a class="btn btn-link" href="contact-us.html">Contact Us</a>
-              <button class="btn btn-primary mx-2">
+        <div class="column d-inline-flex hide-md">
+          <section class="navbar-section">
+            <a href="index.html" class="navbar-brand"><img src="images/logo.png" class="header-logo img-responsive" /></a>
+          </section>
+          <section class="navbar-section">
+            <section class="navbar-section header-menu">
+              <a class="btn btn-link" id="home" href="index.html">主页</a>
+              <a class="btn btn-link" id="schools" href="schools.html">了解学校</a>
+              <a class="btn btn-link" id="judges" href="team.html">我们的陪审官导师</a>
+              <a class="btn btn-link" id="faqs" href="FAQ.html">常见问题</a>
+              <a class="btn btn-link" id="contact" href="contact-us.html">联系我们</a>
+              <button class="btn btn-primary mx-2" style="width: 190px;">
                 <i data-feather="phone"></i> +86 156 1892 8329
               </button>
 
-              <div class="lang d-hide">English | 中文</div>
+              <div class="lang">
+                <span onclick="changeLng('en')">English</span> |
+                <span onclick="changeLng('zh')">中文</span>
+              </div>
             </section>
-          </nav>
+
+          </section>
         </div>
       </div>
     </div>
   </header>
-  <section class="hero schools full-width text-center">
+
+  <header class="main_header navbar show-md">
+    <nav role="navigation" id="nav">
+      <input class="trigger" type="checkbox" id="mainNavButton">
+      <label for="mainNavButton" onclick><img src="images/logo-white.png" class="header-logo img-responsive" /></label>
+
+      <ul>
+        <li><a id="home" href="index.html">主页</a></li>
+        <li><a id="schools" href="schools.html">了解学校</a></li>
+        <li><a id="judges" href="team.html">我们的陪审官导师</a></li>
+        <li><a id="faqs" href="FAQ.html">常见问题</a></li>
+        <li><a id="contact" href="contact-us.html">联系我们</a></li>
+        <li class="lang">Select Language:
+          <span onclick="changeLng('en')">English</span> |
+          <span onclick="changeLng('zh')">中文</span>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero schools full-width text-center hide-xs">
     <div class="hero-lead">
-      <h1 class="">study smarter. faster. better.</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+      <h1 id="YOURSAFESTWAYTOFRANCE">为您的留法之路保驾护航</h1>
+      <p id="YOURSAFESTWAYTOFRANCEDetail">来自真正的大学面试评审团的指导</p>
       <a href="contact-us.html" class="btn-fancy btn-red btn-lg">
-      <i data-feather="calendar"></i> Book a meeting today
+        <i data-feather="calendar"></i> Book a meeting today
       </a>
     </div>
   </section>
@@ -54,106 +78,118 @@
   <section class="container grid-lg faq">
     <div class="columns">
       <div class="column col-12">
-        <h1 class="h3 text-center section-title pb-4">Frequently Asked Questions</h1>
+        <h1 class="h3 text-center section-title pb-4" id="FrequentlyAskedQuestions">
+          常见问题
+        </h1>
 
-        <h2 class="h4">Why France?</h2>
-        <p>France has one of the most prestigious education systems in the world. France is one of the world's top destinations
-          for international students around the world. The 5 best Masters in Finance in the world are in France. The top 1 and
-          top 4 business schools in the world are in France.Out of the Top 50 business schools in the world, 17 of them are in
-          France. Out of the top 3 MBAs in the world, 2 of them are in France, right behind Harvard University.</p>
-        <p>France is also one of the world's top destinations for teaching, languages, arts, history, law, medicine, nuclear
-          energy, aviation and space. France is the 2nd most attractive country to study for international students behind Canada.
-          90% of international students are satisfied of their education.</p>
-        <p>Finally, studying in France is very cheap. Public universities cost around 300 EUR a year, whereas even the best business
-          schools take around 10,000 EUR a year, which is 6 to 15 times less than a similar degree in the USA or in Canada.</p>
-
-        <div class="divider"></div>
-
-        <h2 class="h4">Why are you better?</h2>
-        <p>You can find many agencies that help you go study in France in Shanghai. But most of them just do a little more than
-          dealing with the paperwork. At Académie de France, we take your success very seriously. That's why all our teachers
-          are jury members who actually select the candidates who get accepted in France's best business schools. With us, you
-          get training from the best of the best.</p>
-
-        <div class="divider"></div>
-
-        <h2 class="h4">Do I need to come from a good university?</h2>
-        <p>Coming from a good university helps but it is not mandatory. French universities and schools want to see open and
-          curious people who are ready to discover and try new things. Showing these qualities in your resume and interview are
-          way more decisive than your academic record.</p>
-
-        <div class="divider"></div>
-
-        <h2 class="h4">Can I change majors?</h2>
-        <p>It depends. If you apply for a public university, it is easier if you come from the same major. However, private schools
-          know that it is sometimes hard to know what you want to do so early in your life and they are open to people from all
-          academic backgrounds. But be careful, the school and the embassy will both pay very strong attention to your motivation
-          letter to make sure that your study plan has been carefully pondered. We can help you writing the perfect motivation
-          letter.
+        <h2 class="h4" id="WhyFrance">为什么选择法国？</h2>
+        <p id="WhyFranceDetail1">
+          法国的教育体系闻名全球。法国也是世界各国留学生的首选目的地之一。世界上最好的5个金融学硕士学习都在法国。世界排名第一和第四的商学院在法国。在世界排名前50的商学院中，有17家在法国。在世界排名前3位的MBA中，有2个在法国，就在哈佛大学后面。
+        </p>
+        <p id="WhyFranceDetail2">
+          法国也是世界上教学、语言、艺术、历史、法律、医学、核能、航空和航天的顶尖学术地之一。法国也是仅次于加拿大的第二大吸引留学生的国家。90%的留学生对自己受到的教育感到满意。
+        </p>
+        <p id="WhyFranceDetail3">
+          在法国学习是非常便宜的。公立大学每年花费大约300欧元，而即使是最好的商学院每年花费也只有大约10000欧元，比美国或加拿大的同等院校低6到15倍。
         </p>
 
         <div class="divider"></div>
 
-        <h2 class="h4">Should I go to a public university or a private school?</h2>
-        <p>Public universities have always been France's elite education. They are perfect for engineers, especially in aviation,
-          aerospace, nuclear power, automobiles, high-speed rail, high-end manufacturing, and software industry.</p>
-        <p>However, in business, the best academic centers of business education are private schools. The top private schools
-          are HEC, ESSEC, ESCP, EMLYON, EDHEC and SKEMA. In arts both exist - architecture, applied arts, graphic design, clothing
-          design, film, music, dance, theatrical arts are extremely high-level in France, as well as luxury management, hotel
-          and wine management.</p>
-
-        <div class="divider"></div>
-
-        <h2 class="h4">Do I need to speak French?</h2>
-        <p>No, most business schools and universities don't require you to speak French as they have programs for international
-          students in English. This being said, speaking French is of course a great asset. Some art schools might ask you to
-          have a B1 level at the TCF exam. We can help you with that.</p>
-
-        <div class="divider"></div>
-
-        <h2 class="h4">Do I need to take an English test? Which one?</h2>
-        <p>Most universities will require either a TOEIC, IELTS or a TOEFL. Our instructors are skilled at teaching each one
-          of these tests.</p>
-
-        <div class="divider"></div>
-
-        <h2 class="h4">Which are the best majors to study in France?</h2>
-        <p>France is famous for the excellency of its business schools. In 2018, the top 5 Masters in Finance in the world are
-          all French schools.</p>
-
-        <div class="divider"></div>
-
-        <h2 class="h4">Can I still study in a good university if I don't have a GMAT score?</h2>
-        <p>Yes, but some schools will require you to take a GMAT, GRE, CAT or Tagemage, depending on the school. We can give
-          you special training for each one of these tests.</p>
-
-        <div class="divider"></div>
-
-        <h2 class="h4">Can you help me get a visa?</h2>
-        <p>Yes, once you get accepted, we will give you guidance and make sure you have the best chances to have your visa application
-          accepted.
+        <h2 class="h4" id="WHYISAVEFRANCEBETTER">
+          为什么艾蔚法兰西更有优势？
+        </h2>
+        <p id="WHYISAVEFRANCEBETTERDetail">
+          你可以在上海找到很多帮助你去法国的学习机构。但他们中大多数不过只处理文书之类的工作。在Avé
+          France，我们非常重视你的未来，这就是为什么我们所有的老师都是面试评审团成员，他们都曾面试筛选过最终被法国最好的商学院录取的候选学生。在我们的帮助下，你将从最好的方面得到培训。
         </p>
 
         <div class="divider"></div>
 
-        <h2 class="h4">Can you help me get a scholarship?</h2>
-        <p>Yes, there are 4 types of scholarships you can get in France. France has a huge number of scholarships for all kinds
-          of students, including international students. Many Chinese students in law, economics, engineering can get the Eiffel
-          scholarship, which covers a stipend, medical insurance, travel insurance and access to cultural activities. The government
-          also has many scholarships for international and Chinese students through the French embassy. There are also any regional
-          scholarships given by the Paris Region, Rhône region and the region where you are studying. Last but not least, the
-          school you apply to also has scholarships for many of its international students.</p>
-        <p>In all cases, we will give you guidance and help getting one or more scholarships.</p>
+        <h2 class="h4" id="FROMGOODUNIVERSITY">
+          我一定要来自国内重点大学吗？
+        </h2>
+        <p id="FROMGOODUNIVERSITYDetail">
+          来自一所好大学会有所帮助，但并不是强制性的。法国大学和各院校希望看到那些乐于发现和并尝试新事物的开放又充满好奇心的人。在简历和面试中显示这些个人品质比你的学习成绩更具决定性。
+        </p>
 
         <div class="divider"></div>
 
-        <h2 class="h4">Who are the interviewers?</h2>
-        <p>Interviews are usually given by a group of 2 to 4 interviewers who are alumni of the schools you are applying for.
-          Some of them work for the school but the majority of them are professionals in their field who have accepted to give
-          some of their time to select the best candidates for their school. They do not pay a lot of attention to the candidate's
-          academic background but they want to meet and talk to them to understand who they are and whether their academic choices
-          are the best for them and for the school.</p>
+        <h2 class="h4" id="whyFranceTitle4">我可以换专业吗？</h2>
+        <p id="whyFranceDetail4">
+          这要看情况。如果你申请的是公立大学，继续就读原专业相对容易得多。然而，私立学校知道，很多人有时很难知道他们早期喜欢做什么，所以这些学校向来自各种专业背景的人开放。但要小心，学校和大使馆都会非常注意你的动机信，以确保你的学习计划是经过深思熟虑的。我们一定会帮助你写出完美的动机信。
+        </p>
 
+        <div class="divider"></div>
+
+        <h2 class="h4" id="whyFranceTitle5">
+          我应该选择公立大学还是私立学校？
+        </h2>
+        <p id="whyFranceDetail51">
+          公立大学一直是法国的精英教育。它们非常适合工程师学习，尤其是在航空、航天、核电、汽车、高速铁路、高端制造业和软件行业。
+        </p>
+        <p id="whyFranceDetail52">
+          然而，在商界，商科教育最好的学术中心是私立学校。顶尖的私立学校是HEC、ESSEC、ESCP、EMLYON、EDHEC和SKEMA。在艺术方面，公立私立都存在——建筑、应用艺术、平面设计、服装设计、电影、音乐、舞蹈、戏剧艺术在法国是极其高水平的，豪华管理、酒店和葡萄酒管理也是如此。
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 class="h4" id="whyFranceTitle6">我一定要会说法语吗？</h2>
+        <p id="whyFranceDetail6">
+          当然不是。大多数商学院和大学不要求你讲法语，因为他们有为国际学生开设的英语课程。据说，会说法语是一笔巨大的财富。一些艺术院校可能会要求你在TCF考试中有B1水平。我们可以帮助你。
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 class="h4" id="whyFranceTitle7">
+          我需要参加英语考试吗？什么考试？
+        </h2>
+        <p id="whyFranceDetail7">
+          大多数大学会要求雅思、托福、托业其中之一。我们的导师对于这些考试都有丰富的教学经验。
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 class="h4" id="whyFranceTitle8">法国最好的专业是哪些？</h2>
+        <p id="whyFranceDetail8">
+          法国以其商学院的优秀之处而闻名。2018，世界排名前5位的金融硕士都是法国学校。
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 class="h4" id="whyFranceTitle9">
+          如果我没有GMAT成绩，我是否还能就读优秀大学呢？
+        </h2>
+        <p id="whyFranceDetail9">
+          当然，但是有的大学会要求你有GMAT, GRE, CAT 或者
+          TAGE-MAGE，不过要看是什么学院。我们会为这些测试给你提供特殊培训。
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 class="h4" id="whyFranceTitle10">Avé France是否帮我得到签证？</h2>
+        <p id="whyFranceDetail10">
+          当然，一旦你被顺利录取，我们会给你指导来确保你有最大顺利得到签证的机会。
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 class="h4" id="whyFranceTitle11">
+          Avé France是否可以帮我得到奖学金？
+        </h2>
+        <p id="whyFranceDetail111">
+          当然。法国有4种奖学金。法国为包括国际学生在内的各类学生提供了大量奖学金。许多中国学生在法律，经济，工程学习上可以获得埃菲尔奖学金，其中包括津贴，医疗保险，旅游保险和文化活动。政府还通过法国大使馆为国际学生和中国学生提供了很多奖学金。巴黎地区、
+          Rhône地区和你就读的地区也有地区奖学金。最后也最重要的是，你申请的学校也有许多为国际学生提供的奖学金。
+        </p>
+        <p id="whyFranceDetail112">
+          在任何情况下，我们都会给你指导和帮助获得一个或多个奖学金。
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 class="h4" id="whyFranceTitle12">面试官是谁？</h2>
+        <p id="whyFranceDetail12">
+          面试通常由一组2到4名面试官主持，他们是你申请的学校的校友。他们中的一些人为学校工作，但大多数都是所在领域的专业人士，他们愿意花一些时间为学校挑选最好的候选人。他们不太注意候选人的学术背景，但他们想与这些学生见面并与他们交谈来了解他们的情况，以及他们的学术选择是否对他们和学校是最好的。
+        </p>
       </div>
     </div>
   </section>
@@ -163,52 +199,44 @@
       <div class="columns">
         <div class="column signup-form">
           <h1 class="h3 section-title">Let's Get the Future Started</h1>
-          <form action="#" method="post" id="contact_form" class="form-horizontal">
-            <div class="name">
-              <label for="name"></label>
-              <input type="text" placeholder="My name is" name="name" id="name_input" required>
-            </div>
-            <div class="email">
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="My name is" name="name" id="name_input" required />
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+              required />
+          </div>
+          <div class="telephone">
+            <label for="name"></label>
+            <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required />
+          </div>
 
-              <label for="email"></label>
-              <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-              required>
-            </div>
-            <div class="telephone">
-              <label for="name"></label>
-              <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required>
-            </div>
-
-            <div class="submit">
-              <button type="submit" value="Send Message" class="btn-fancy btn-red btn-lg">
-                <i data-feather="calendar"></i> Book a meeting today
-              </button>
-            </div>
-          </form>
+          <div class="submit">
+            <button class="btn-fancy btn-red btn-lg" onclick="sendEmail()">
+              <i data-feather="calendar"></i> Book a meeting today
+            </button>
+          </div>
         </div>
-        <div class="column">
-          <img src="images/phone.png" alt="" class="img-responsive phone">
+        <div class="column phone hide-xs">
+          <img src="images/phone.png" alt="" class="img-responsive phone" />
         </div>
       </div>
     </div>
   </section>
 
   <div class="float-sm">
-    <div class="fl-fl float-fb">
-      <i class="fa fa-facebook"></i>
-      <a href="" target="_blank"> Like us!</a>
+    <div class="fl-fl float-phone">
+      <i class="fa fa-phone"></i><span>+86 156 1892 8329</span>
     </div>
-    <div class="fl-fl float-tw">
-      <i class="fa fa-twitter"></i>
-      <a href="" target="_blank">Follow us!</a>
+    <div class="fl-fl float-wechat qr">
+      <i class="fa fa-wechat"></i>
+      <div class="tooltip"><img src="images/qr1.jpg" /></div>
     </div>
-    <div class="fl-fl float-ig">
-      <i class="fa fa-instagram"></i>
-      <a href="" target="_blank">Follow us!</a>
-    </div>
-    <div class="fl-fl float-pn qr">
-      <i class="fa fa-pinterest"></i>
-      <div class="tooltip"><img src="images/qr.png" /></div>
+    <div class="fl-fl float-users qr">
+      <i class="fa fa-users"></i>
+      <div class="tooltip"><img src="images/qr2.jpeg" /></div>
     </div>
   </div>
 
@@ -221,15 +249,9 @@
           </div>
           <div class="column text-right">
             <ul>
-              <li>
-                <a href="#">Cookies</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Sitemap</a></li>
             </ul>
           </div>
         </div>
@@ -246,7 +268,16 @@
   <script src="js/jQuery.headroom.js"></script>
   <script async type="text/javascript" src="/js/scripts.js"></script>
   <script>
-    sight();
+    //   sight();
+
+  </script>
+  <script src="js/i18next.js"></script>
+  <script>
+    function sendEmail() {
+      let name = `My_name_is_${document.getElementById("name_input").value}`;
+      let phone = `${document.getElementById("telephone_input").value}`;
+      window.location.href = `mailto:info@avefrance.cn?subject=${name}&body=${phone}`;
+    }
 
   </script>
 </body>

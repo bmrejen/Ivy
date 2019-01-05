@@ -1,11 +1,18 @@
 .faq {
-    padding: 4rem 0;
+  padding: 4rem 3rem;
 
-    h2 {
-        color: $accent-color;
-    }
+  h2 {
+    color: $accent-color;
+  }
 
-    .divider {
-        margin: 2rem 0;
+  .divider {
+    margin: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+    .faq {
+        margin-top: 3rem;
+        padding: 2rem;
     }
 }

@@ -36,3 +36,22 @@
   margin-top: 4rem;
   margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 480px) {
+  .team {
+    padding: 2rem 0;
+
+    .section-title {
+      padding: 0 2rem;
+    }
+  
+    .column {
+      padding: 0 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .s-circle {
+      max-width: 8rem;
+    }
+  }
+}

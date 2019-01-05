@@ -2,46 +2,71 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Académie de France</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avé France</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+  <script src="https://unpkg.com/i18next/i18next.js"></script>
 </head>
 
 <body>
-
-  <header id="top" class="py-4 headroom">
+  <header class="main_header navbar hide-md">
     <div class="container grid-lg">
       <div class="columns">
-        <div class="column">
-          <nav class="navbar">
-            <section class="navbar-section">
-              <a href="#" class="navbar-brand"><img src="images/logo.svg" alt=""></a>
-            </section>
-            <section class="navbar-section">
-              <a class="btn btn-link" href="index.html">Home</a>
-              <a class="btn btn-link" href="schools.html">Schools</a>
-              <a class="btn btn-link" href="team.html">Our Judges</a>
-              <a class="btn btn-link" href="FAQ.html">FAQs</a>
-              <a class="btn btn-link" href="contact-us.html">Contact Us</a>
-              <button class="btn btn-primary mx-2">
+        <div class="column d-inline-flex hide-md">
+          <section class="navbar-section">
+            <a href="index.html" class="navbar-brand"><img src="images/logo.png" class="header-logo img-responsive" /></a>
+          </section>
+          <section class="navbar-section">
+            <section class="navbar-section header-menu">
+              <a class="btn btn-link" id="home" href="index.html">主页</a>
+              <a class="btn btn-link" id="schools" href="schools.html">了解学校</a>
+              <a class="btn btn-link" id="judges" href="team.html">我们的陪审官导师</a>
+              <a class="btn btn-link" id="faqs" href="FAQ.html">常见问题</a>
+              <a class="btn btn-link" id="contact" href="contact-us.html">联系我们</a>
+              <button class="btn btn-primary mx-2" style="width: 190px;">
                 <i data-feather="phone"></i> +86 156 1892 8329
               </button>
 
-              <div class="lang d-hide">English | 中文</div>
+              <div class="lang">
+                <span onclick="changeLng('en')">English</span> |
+                <span onclick="changeLng('zh')">中文</span>
+              </div>
             </section>
-          </nav>
+
+          </section>
         </div>
       </div>
     </div>
   </header>
-  <section class="hero contact-us full-width text-center">
+
+  <header class="main_header navbar show-md">
+    <nav role="navigation" id="nav">
+      <input class="trigger" type="checkbox" id="mainNavButton">
+      <label for="mainNavButton" onclick><img src="images/logo-white.png" class="header-logo img-responsive" /></label>
+
+      <ul>
+        <li><a id="home" href="index.html">主页</a></li>
+        <li><a id="schools" href="schools.html">了解学校</a></li>
+        <li><a id="judges" href="team.html">我们的陪审官导师</a></li>
+        <li><a id="faqs" href="FAQ.html">常见问题</a></li>
+        <li><a id="contact" href="contact-us.html">联系我们</a></li>
+        <li class="lang">Select Language:
+          <span onclick="changeLng('en')">English</span> |
+          <span onclick="changeLng('zh')">中文</span>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <section class="hero contact-us full-width text-center hide-xs">
     <div class="hero-lead">
       <h1 class="">we'd love to hear from you</h1>
       <p>Send us a message and we'll responds as soon as possible</p>
@@ -49,91 +74,94 @@
   </section>
 
   <section class="contact-form">
+    <div class="hidden-qr text-center show-xs">
+      <h1 class="h3 section-title">Wechat</h1>
+      <img class="img-responsive" src="images/qr2.jpeg" />
+    </div>
     <div class="container grid-lg">
-      <div class="columns">
-        <div class="column col-7 signup-form">
-          <div class="wrapper">
+      <div class="columns col-oneline">
+        <div class="column col-6 col-xs-12 col-sm-6 contact-page signup-form">
+          <div class="wrapper form">
             <h1 class="h3 section-title">Let's Get the Future Started</h1>
-            <form action="#" method="post" id="contact_form" class="form-horizontal">
-              <div class="name">
-                <label for="name"></label>
-                <input type="text" placeholder="My name is" name="name" id="name_input" required>
-              </div>
-              <div class="email">
+            <div class="name">
+              <label for="name"></label>
+              <input type="text" placeholder="My name is" name="name" id="name_input" required />
+            </div>
+            <div class="email">
+              <label for="email"></label>
+              <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+                required />
+            </div>
+            <div class="telephone">
+              <label for="name"></label>
+              <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required />
+            </div>
 
-                <label for="email"></label>
-                <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-                  required>
-              </div>
-              <div class="telephone">
-                <label for="name"></label>
-                <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required>
-              </div>
-
-              <div class="submit">
-                <button type="submit" value="Send Message" class="btn-fancy btn-red btn-lg">
-                  <i data-feather="mail"></i> Send Message
-                </button>
-              </div>
-            </form>
+            <div class="submit">
+              <button type="submit" value="Send Message" class="btn-fancy btn-red btn-lg" onclick="sendEmail()">
+                <i data-feather="mail"></i> Send Message
+              </button>
+            </div>
           </div>
         </div>
-        <div class="column col-4 col-ml-auto info">
+
+        <div class="column col-6 info hide-xs">
           <div class="wrapper">
             <h1 class="h3 section-title">Contact Info</h1>
-            <img class="img-responsive" src="images/qr.png" />
-
+            <img class="img-responsive" src="images/qr2.jpeg" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="container grid-lg quote">
+  <section class="container grid-lg quote hide-xs">
     <div class="columns">
       <div class="column col-4">
-        <img src="images/team_1.jpg" class="s-circle img-responsive" alt="">
+        <img src="images/team_1.jpg" class="s-circle img-responsive" alt="" />
       </div>
       <div class="column col-8 d-inline-flex">
         <blockquote class="blockquote">
-          Genius is one percent inspiration and ninety-nine percent perspiration.
+          Genius is one percent inspiration and ninety-nine percent
+          perspiration.
           <footer>Someone Famous</footer>
         </blockquote>
       </div>
-
     </div>
   </section>
 
   <section class="container grid-lg more-info">
     <div class="columns">
       <div class="column col d-flex">
-        <p>Phone: +1 129 209 291<br /> E-mail: <a href="mailto:support@mysite.com">support@mysite.com</a></p>
+        <p>
+          Phone: +1 129 209 291<br />
+          E-mail: <a href="mailto:support@mysite.com">support@mysite.com</a>
+        </p>
       </div>
       <div class="column col d-flex">
-        <p>Company HK Litd, 25/F.168<br>Queen Wan Chai District, Hong Kong</p>
+        <p>
+          Company HK Litd, 25/F.168<br />Queen Wan Chai District, Hong Kong
+        </p>
       </div>
       <div class="column col d-flex">
-        <p>Phone: +852 129 209 291 <br><a href="mailto:hk@mysite.com">hk@mysite.com</a></p>
+        <p>
+          Phone: +852 129 209 291 <br /><a href="mailto:hk@mysite.com">hk@mysite.com</a>
+        </p>
       </div>
     </div>
   </section>
 
   <div class="float-sm">
-    <div class="fl-fl float-fb">
-      <i class="fa fa-facebook"></i>
-      <a href="" target="_blank"> Like us!</a>
+    <div class="fl-fl float-phone">
+      <i class="fa fa-phone"></i><span>+86 156 1892 8329</span>
     </div>
-    <div class="fl-fl float-tw">
-      <i class="fa fa-twitter"></i>
-      <a href="" target="_blank">Follow us!</a>
+    <div class="fl-fl float-wechat qr">
+      <i class="fa fa-wechat"></i>
+      <div class="tooltip"><img src="images/qr1.jpg" /></div>
     </div>
-    <div class="fl-fl float-ig">
-      <i class="fa fa-instagram"></i>
-      <a href="" target="_blank">Follow us!</a>
-    </div>
-    <div class="fl-fl float-pn qr">
-      <i class="fa fa-pinterest"></i>
-      <div class="tooltip"><img src="images/qr.png" /></div>
+    <div class="fl-fl float-users qr">
+      <i class="fa fa-users"></i>
+      <div class="tooltip"><img src="images/qr2.jpeg" /></div>
     </div>
   </div>
 
@@ -146,23 +174,17 @@
           </div>
           <div class="column text-right">
             <ul>
-              <li>
-                <a href="#">Cookies</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Sitemap</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </footer>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
   <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
@@ -171,7 +193,16 @@
   <script src="js/jQuery.headroom.js"></script>
   <script async type="text/javascript" src="/js/scripts.js"></script>
   <script>
-    sight();
+    //   sight();
+
+  </script>
+  <script src="js/i18next.js"></script>
+  <script>
+    function sendEmail() {
+      let name = `My_name_is_${document.getElementById("name_input").value}`;
+      let phone = `${document.getElementById("telephone_input").value}`;
+      window.location.href = `mailto:info@avefrance.cn?subject=${name}&body=${phone}`;
+    }
 
   </script>
 </body>

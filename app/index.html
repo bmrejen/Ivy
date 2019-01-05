@@ -2,49 +2,77 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Académie de France</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avé France</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Unica+One|Vollkorn" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="bookmark" href="/favicon.ico" />
+  <script src="https://unpkg.com/i18next/i18next.js"></script>
 </head>
 
 <body>
-
-  <header id="top" class="py-4 headroom">
+  <header class="main_header navbar hide-md">
     <div class="container grid-lg">
       <div class="columns">
-        <div class="column">
-          <nav class="navbar">
-            <section class="navbar-section">
-              <a href="#" class="navbar-brand"><img src="images/logo.svg" class="img-responsive" alt=""></a>
-            </section>
-            <section class="navbar-section">
-              <a class="btn btn-link" href="index.html">Home</a>
-              <a class="btn btn-link" href="schools.html">Schools</a>
-              <a class="btn btn-link" href="team.html">Our Judges</a>
-              <a class="btn btn-link" href="FAQ.html">FAQs</a>
-              <a class="btn btn-link" href="contact-us.html">Contact Us</a>
-              <button class="btn btn-primary mx-2">
+        <div class="column d-inline-flex hide-md">
+          <section class="navbar-section">
+            <a href="index.html" class="navbar-brand"><img src="images/logo.png" class="header-logo img-responsive" /></a>
+          </section>
+          <section class="navbar-section">
+            <section class="navbar-section header-menu">
+              <a class="btn btn-link" id="home" href="index.html">主页</a>
+              <a class="btn btn-link" id="schools" href="schools.html">了解学校</a>
+              <a class="btn btn-link" id="judges" href="team.html">我们的陪审官导师</a>
+              <a class="btn btn-link" id="faqs" href="FAQ.html">常见问题</a>
+              <a class="btn btn-link" id="contact" href="contact-us.html">联系我们</a>
+              <button class="btn btn-primary mx-2" style="width: 190px;">
                 <i data-feather="phone"></i> +86 156 1892 8329
               </button>
 
-              <div class="lang d-hide">English | 中文</div>
+              <div class="lang">
+                <span onclick="changeLng('en')">English</span> |
+                <span onclick="changeLng('zh')">中文</span>
+              </div>
             </section>
-          </nav>
+
+          </section>
         </div>
       </div>
     </div>
   </header>
+
+  <header class="main_header navbar show-md">
+    <nav role="navigation" id="nav">
+      <input class="trigger" type="checkbox" id="mainNavButton">
+      <label for="mainNavButton" onclick><img src="images/logo-white.png" class="header-logo img-responsive" /></label>
+
+      <ul>
+        <li><a id="home" href="index.html">主页</a></li>
+        <li><a id="schools" href="schools.html">了解学校</a></li>
+        <li><a id="judges" href="team.html">我们的陪审官导师</a></li>
+        <li><a id="faqs" href="FAQ.html">常见问题</a></li>
+        <li><a id="contact" href="contact-us.html">联系我们</a></li>
+        <li class="lang">Select Language:
+          <span onclick="changeLng('en')">English</span> |
+          <span onclick="changeLng('zh')">中文</span>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
   <section class="hero main full-width text-center">
     <div class="hero-lead">
-      <h1 class="">study smarter. faster. better.</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+      <h1 id="YOURSAFESTWAYTOFRANCE">为您的留法之路保驾护航</h1>
+      <p id="YOURSAFESTWAYTOFRANCEDetail">来自真正的大学面试评审团的指导</p>
       <a href="contact-us.html" class="btn-fancy btn-red btn-lg">
         <i data-feather="calendar"></i> Book a meeting today
       </a>
@@ -53,103 +81,195 @@
 
   <div class="schools bg-primary">
     <div class="container grid-lg">
-      <img src="images/logos/01.png" alt="">
-      <img src="images/logos/02.png" alt="">
-      <img src="images/logos/03.png" alt="">
-      <img src="images/logos/04.png" alt="">
-      <img src="images/logos/06.png" alt="">
+      <img src="images/logos/01.png" alt="" />
+      <img src="images/logos/02.png" alt="" />
+      <img class="hide-md" src="images/logos/03.png" alt="" />
+      <img class="hide-xs" src="images/logos/04.png" alt="" />
+      <img class="hide-xs" src="images/logos/06.png" alt="" />
     </div>
+    <a class="tooltip" data-tooltip="step">title</a>
   </div>
 
   <section class="journey">
-    <h1 class="h3 text-center section-title">The Journey to France</h1>
+    <h1 class="h3 text-center section-title" id="journey">法国之旅</h1>
 
     <div class="journey-steps"></div>
 
     <div class="slider container">
       <div data-step="Step 1" class="slide columns col-gapless">
-        <div class="overlay column col-4">
-          <h2 class="h5 slide-title">One-on-One Consultation</h2>
-          <p>Everyone is different, that is why we conduct in-depth interviews to create a tailored-made academic
-            strategy specific
-            to each student’s goal and needs.</p>
-          <button class="btn btn-ghost ghost-red next">Next Step
-            <i class="icon icon-forward"></i>
+        <div class="overlay column col-4 col-xs-12">
+          <h2 class="h5 slide-title" id="consultation">一对一咨询</h2>
+          <p id="consultationDetail">
+            每个人都是独一无二的，这就是我们进行深入面谈的原因，以此来创建一个针对每个学生的目标和需要来制定的学术策略。
+          </p>
+          <button class="btn btn-ghost ghost-red next nextstep">
+            Next Step <i class="icon icon-forward"></i>
           </button>
         </div>
-        <img class="column col-8 img-responsive img-fit-cover" src="images/step-1.jpg" alt="" srcset="">
+        <img class="column col-8 img-responsive img-fit-cover hide-xs" src="images/step-1.jpg" alt="" srcset="" />
       </div>
       <div data-step="Step 2" class="slide columns col-gapless">
-        <div class="overlay column col-4">
-          <h2 class="h5 slide-title">Making your Paperwork Perfect</h2>
-          <p>We will make sure your CV, motivation letter and questionnaire answers and other documents show the best
-            parts of
-            you - even the ones you can't see</p>
-          <button class="btn btn-ghost ghost-red next">Next Step
-            <i class="icon icon-forward"></i>
+        <div class="overlay column col-4 col-xs-12">
+          <h2 class="h5 slide-title" id="Paperwork">确保完美的文书材料</h2>
+          <p id="PaperworkDetail">
+            我们会确保您的简历、动机信、问卷回答以及其他文件展示出您最好的一面——
+            甚至是您自己不曾注意到过的一面。
+          </p>
+          <button class="btn btn-ghost ghost-red next nextstep">
+            Next Step <i class="icon icon-forward"></i>
           </button>
         </div>
-        <img class="column col-8 img-responsive img-fit-cover" src="images/step-2.jpg" alt="" srcset="">
+        <img class="column col-8 img-responsive img-fit-cover hide-xs" src="images/step-2.jpg" alt="" srcset="" />
       </div>
       <div data-step="Step 3" class="slide columns col-gapless">
-        <div class="overlay column col-4">
-          <h2 class="h5 slide-title">Written Tests Prep</h2>
-          <p>TOEFL, GRE, GMAT, CAT, TOEIC, TCF, DELF, Tagemage... Our teaching experts we will make sure you have the
-            best score
-            possible
+        <div class="overlay column col-4 col-xs-12">
+          <h2 class="h5 slide-title" id="Written">笔试准备</h2>
+          <p id="WrittenDetail">
+            TOEFL, GRE, GMAT, CAT, TCF, DELF,
+            Tage-mage等考试。我们的教学专家会确保你达到最好的语言成绩。
           </p>
-          <button class="btn btn-ghost ghost-red next">Next Step
-            <i class="icon icon-forward"></i>
+          <button class="btn btn-ghost ghost-red next nextstep">
+            Next Step <i class="icon icon-forward"></i>
           </button>
         </div>
-        <img class="column col-8 img-responsive img-fit-cover" src="images/step-1.jpg" alt="" srcset="">
+        <img class="column col-8 img-responsive img-fit-cover hide-xs" src="images/step-1.jpg" alt="" srcset="" />
       </div>
       <div data-step="Step 4" class="slide columns col-gapless">
-        <div class="overlay column col-4">
-          <h2 class="h5 slide-title">Interview Training</h2>
-          <p>One-to-one interview training with the pros, the interview is THE crucial moment of your application. We
-            make sure
-            you leave a great impression on the jury.</p>
-          <button class="btn btn-ghost ghost-red next">Next Step
-            <i class="icon icon-forward"></i>
+        <div class="overlay column col-4 col-xs-12">
+          <h2 class="h5 slide-title" id="Interview">面试培训</h2>
+          <p id="InterviewDetail">
+            由权威人士指导的一对一面试培训。面试是您申请过程中最具有决定性的环节，我们会确保你会给面试陪审官留下深刻的印象。
+          </p>
+          <button class="btn btn-ghost ghost-red next nextstep">
+            Next Step <i class="icon icon-forward"></i>
           </button>
         </div>
-        <img class="column col-8 img-responsive img-fit-cover" src="images/step-2.jpg" alt="" srcset="">
+        <img class="column col-8 img-responsive img-fit-cover hide-xs" src="images/step-2.jpg" alt="" srcset="" />
       </div>
       <div data-step="Step 5" class="slide columns col-gapless">
-        <div class="overlay column col-4">
-          <h2 class="h5 slide-title">Visa Acquisition</h2>
-          <p>Congratulations, you made it! But getting a visa process is hard and uncertain. We make sure you have
-            maximum chances
-            to go to the school of your dreams.</p>
-          <button class="btn btn-ghost ghost-red next">Next Step
-            <i class="icon icon-forward"></i>
+        <div class="overlay column col-4 col-xs-12">
+          <h2 class="h5 slide-title" id="Visa">获取签证</h2>
+          <p id="VisaDetail">
+            恭喜！您已经达到了目标！但是获取签证的过程是艰难并且具有不确定性。我们会确保您得到最大得到签证的概率来完成您的法国梦！
+          </p>
+          <button class="btn btn-ghost ghost-red next nextstep">
+            下一步 <i class="icon icon-forward"></i>
           </button>
         </div>
-        <img class="column col-8 img-responsive img-fit-cover" src="images/step-2.jpg" alt="" srcset="">
+        <img class="column col-8 img-responsive img-fit-cover hide-xs" src="images/step-2.jpg" alt="" srcset="" />
       </div>
+    </div>
+  </section>
 
+  <section class="introduction container grid-lg">
+    <h1 class="h3 text-center section-title" id="introductionTitle">
+      Avé France 简介
+    </h1>
+    <div class="columns">
+      <div class="column">
+        <div class="item">
+          <img src="images/shape1.svg" class="img-responsive" />
+          <div class="_content">
+            <h2 class="h4" id="introductionTitle1">同类公司形式</h2>
+            <p id="introductionDetail1">
+              辅导学生进入外国大学的行业充斥着不少阴暗的操作：没有教学背景的教师，没有资格的指导老师，中介不激励学生进入最好学校，没有任何后果保障并且偷懒的公司，或者展示不出学生真正潜能的培训实践。
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="item flip">
+          <img src="images/shape2.svg" class="img-responsive fr" />
+          <div class="_content">
+            <h2 class="h4" id="introductionTitle2">Avé France 团队模式</h2>
+            <p id="introductionDetail2">
+              在艾蔚法兰西，所有的顾问都是真正的大学评审团成员，也是参与录取过程的成员。他们由法国最好的大学和学校指定，在中国区域招聘，并负责会见竞争激烈的面试候选人。
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        
+        <div class="item">
+          <img src="images/shape3.svg" alt="" class="img-responsive" />
+          <div class="_content">
+            <h2 class="h4" id="introductionTitle3">Avé France 优势</h2>
+            <p id="introductionDetail3">
+              我们知道如何看到学生自己看不到的的优点，我们知道如何加快他们的成功进程。我们只提供最好的专业人士的辅助，确保您得到最好的结果。
+            </p>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <section class="customer container">
+    <h1 class="h3 text-center section-title" id="customerssayaboutus">
+      来自学生们的反馈
+    </h1>
+    <div class="columns">
+      <div class="container grid-lg">
+        <div class="column team-member container">
+          <p>
+            “感谢Avé
+            France的顾问和老师。去年我还对未来的学习和职业计划感到迷茫，于是我找到了Avé
+            France.
+            这里的老师先给我进行了个人评估，然后根据我的评估、背景和目标，给我制定了留学计划，并一步一步地帮助我落实。现在我成功地在法国就读里昂高等商学院国际酒店管理硕士学位，也找到了自己未来的职业发展方向。感谢Avé
+            France团队所有人对我的耐心指导！”
+          </p>
+          <div class="customer-user">
+            <img class="logo" src="http://www.yibaicdn.com/FugjrLiFmlQ6Mx1eKmex3fq82iFv" />
+            <div class="name">王同学</div>
+          </div>
+        </div>
+        <hr class="show-xs sep-cust">
+        <div class="column team-member container">
+          <p>
+            “Benoit老师作为一个在中国生活了6年的法国人，非常了解中国和法国的文化和教育背景。起初做模拟面试时，面对问题，我总是不知道应该说什么。在Benoit老师的细心指导下，我在真正的面试过程中可以对答如流，得心应手，给出面试老师最满意的答案，最后得到了很高的分数，也顺利拿到多所院校的offer。强烈推荐Avé
+            France！”
+          </p>
+          <div class="customer-user">
+            <img class="logo" src="images/student1.jpg" />
+            <div class="name">张同学</div>
+          </div>
+        </div>
+        <hr class="show-xs sep-cust">
+        <div class="column team-member container">
+          <p>
+            “找到Avé
+            France之前，我曾经找到过另一家国内知名留学咨询公司，当时我虽然顺利拿到一些offer，但都是我不喜欢的大学，而且都是法国三流大学，我才意识到国内有些留学公司为了达到100%的通过率，会给学生推荐很差的大学来保证自己的通过率。在经历过这些后，我通过同学的推荐，找到了Avé
+            France。这里的顾问和老师分析了我的基本情况后和我共同重新选择了学校。这些院校里，有些是法国顶尖大学，我当时对自己很不自信，认为这是浪费时间。但是老师和顾问一直在激励我，并耐心帮助我提升个人水平和能力，无论是在文书还是在面试过程中，我都能展现出最好的自己。最后我顺利拿到高等商学院TOP前五的几所院校的offer,
+            这一切都是来自于Avé France团队的辛劳付出。感谢Avé
+            France老师给我的鼓励和学业上的支持！”
+          </p>
+          <div class="customer-user">
+            <img class="logo" src="images/student2.jpg" />
+            <div class="name">陈同学</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="school-overview">
-    <h1 class="h3 text-center section-title">Get accepted to these french universities</h1>
+    <h1 class="h3 text-center section-title">
+      GET ACCEPTED TO 50+ UNIVERSITIES AND SCHOOLS
+    </h1>
     <div class="school-menu"></div>
     <div class="school-grid container">
       <div class="container grid-lg">
         <div class="school-row">
-          <img class="img-responsive img-fit-cover" src="images/schools/essec.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/grenoble.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/hec.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/icn.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/sorbonne.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/escp.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/essec.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/grenoble.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/hec.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/icn.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/sorbonne.png" alt="" srcset="">
-          <img class="img-responsive img-fit-cover" src="images/schools/escp.png" alt="" srcset="">
+          <img class="img-responsive img-fit-cover" src="images/schools/essec.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/grenoble.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/hec.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/icn.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/sorbonne.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/escp.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/essec.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/grenoble.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/hec.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/icn.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/sorbonne.png" alt="" srcset="" />
+          <img class="img-responsive img-fit-cover" src="images/schools/escp.png" alt="" srcset="" />
         </div>
       </div>
     </div>
@@ -157,64 +277,78 @@
 
   <section class="team container grid-lg">
     <div class="section-title text-center">
-      <h1 class="h3">Meet Our Judges</h1>
+      <h1 class="h3" id="MeetOurJudges">关于我们的面试陪审官</h1>
       <p class="accent-color h6">
-        <strong>Our experienced Instructors are also qualified Jury members</strong>
+        <strong id="MeetOurJudgesDesp">我们经验丰富的导师也是通过认证的面试陪审官</strong>
       </p>
     </div>
     <div class="columns">
       <div class="column text-center team-member">
-        <img src="images/team_2.jpg" alt="" class="s-circle">
-        <h6 class="subtitle">Founder</h6>
-        <h2 class="h4">Benoit Mrejen - 白诺</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
+        <img src="images/team_1.jpg" alt="" class="s-circle" />
+        <h6 class="subtitle" id="PRESIDENTOFTHEJURY">2018年面试总陪审官</h6>
+        <h2 class="h4">BENOIT MREJEN - 白诺</h2>
+        <p id="PRESIDENTOFTHEJURYDetail">
+          2018面试总陪审官, <br />法国里昂高等商学院 管理学硕士,
+          <br />曾就读于华东师范大学及早稻田大学,
+          <br />艾蔚法兰西创始人兼CEO,<br />在中国5年间曾教授过逾2000名学生,
+          <br />曾帮助学生成功进入法国前5名的学校
+        </p>
       </div>
       <div class="column text-center team-member">
-        <img src="images/team_1.jpg" alt="" class="s-circle">
-        <h6 class="subtitle">Instructor</h6>
-        <h2 class="h4">Renjing</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
+        <img src="images/team_2.png" alt="" class="s-circle" />
+        <h6 class="subtitle" id="JURYMEMBER">2018面试陪审官</h6>
+        <h2 class="h4">THIBAULT FANTIAN</h2>
+        <p id="JURYMEMBERDetail">
+          法国南锡高等商学院 管理学硕士,
+          <br />曾就读于博洛尼亚大学以及华东理工大学,
+          <br />Frameaway（位于上海的摄影公司）创始人兼CEO,
+          <br />在中国5年间曾教授过逾1000名学生
+        </p>
       </div>
-      <div class="column text-center team-member">
-        <img src="images/team_3.jpg" alt="" class="s-circle">
-        <h6 class="subtitle">Instructor</h6>
-        <h2 class="h4">Jacqueline Chen</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-      </div>
+      <!-- <div class="column text-center team-member">
+          <img src="images/team_2.png" alt="" class="s-circle" />
+          <h6 class="subtitle" id="JURYMEMBER">2018面试陪审官</h6>
+          <h2 class="h4">THIBAULT FANTIAN</h2>
+          <p id="JURYMEMBERDetail">
+            法国南锡高等商学院 管理学硕士,
+            <br />曾就读于博洛尼亚大学以及华东理工大学,
+            <br />Frameaway（位于上海的摄影公司）创始人兼CEO,
+            <br />在中国5年间曾教授过逾1000名学生
+          </p>
+        </div> -->
     </div>
   </section>
 
   <section class="features">
-    <h1 class="h3 text-center section-title">What IVy brings to the Future</h1>
+    <h1 class="h3 text-center section-title" id="featuresTitle">
+      AVÉ FRANCE 给你
+    </h1>
     <div class="container grid-lg">
       <div class="columns col-gapless">
         <div class="column">
           <div class="panel bg-primary panel-1">
             <div class="panel-header">
               <div class="panel-title">
-                <h5>Instructed by Judges</h5>
+                <h5 id="InstructedbyJudges">来自面试陪审官的培训</h5>
                 <i class="icon" data-feather="users"></i>
               </div>
             </div>
             <div class="panel-body">
               <ul>
-                <li>Our Instructors are experienced Judges who knows how to be accepted to any school of choice.</li>
-                <li>Mock tests corrected by real jury members (TAGE-MAGE, French tests, TCF, TEF, DELF)</li>
-                <li>One-to-One interview preparations conducted by certified jury members.</li>
+                <li id="InstructedbyJudgesDetail1">
+                  我们的导师是经验丰富的面试陪审官，他们知道如何被学校接受。
+                </li>
+                <li id="InstructedbyJudgesDetail2">
+                  由真正的面试陪审官来纠错的模拟测试（TAGE-MAGE，法语测试，TCF，TEF，Delf）
+                </li>
+                <li id="InstructedbyJudgesDetail3">
+                  来自认证面试陪审官的一对一的面试指导。
+                </li>
               </ul>
             </div>
             <div class="panel-footer">
-              <button class="btn btn-ghost ghost-blue">View Our Teachers
-                <i class="icon icon-forward"></i>
+              <button class="btn btn-ghost ghost-blue">
+                View Our Teachers <i class="icon icon-forward"></i>
               </button>
             </div>
           </div>
@@ -223,20 +357,29 @@
           <div class="panel bg-white panel-2">
             <div class="panel-header">
               <div class="panel-title">
-                <h5>Curated Education</h5>
+                <h5 id="PERSONALIZEDPLAN">个性化方案</h5>
                 <i class="icon" data-feather="crosshair"></i>
               </div>
             </div>
             <div class="panel-body">
               <ul>
-                <li>Students are personally interviewed and assessed with a series of tests.</li>
-                <li>Custom tailored plans based from initial assessment and preferred schools.</li>
-                <li>Study are laser focused on exactly what is needed with no extra time wasted.</li>
+                <li id="PERSONALIZEDPLANDetail1">
+                  学生本人将通过一系列测试得到评估。
+                </li>
+                <li id="PERSONALIZEDPLANDetail2">
+                  基于学生的优势和首选学校来定制申请。
+                </li>
+                <li id="PERSONALIZEDPLANDetail3">
+                  网上申请和联系大学由我们完成。
+                </li>
+                <li id="PERSONALIZEDPLANDetail4">
+                  保证签证申请和奖学金获取的指导。
+                </li>
               </ul>
             </div>
             <div class="panel-footer">
-              <button class="btn btn-ghost ghost-white">Review the Process
-                <i class="icon icon-forward"></i>
+              <button class="btn btn-ghost ghost-white">
+                Review the Process <i class="icon icon-forward"></i>
               </button>
             </div>
           </div>
@@ -245,20 +388,24 @@
           <div class="panel bg-accent panel-3">
             <div class="panel-header">
               <div class="panel-title">
-                <h5>Career Security</h5>
+                <h5 id="TOPLEVEL">来自专业人士的高水准培训</h5>
                 <i class="icon" data-feather="shield"></i>
               </div>
             </div>
             <div class="panel-body">
               <ul>
-                <li>Online applications and contacting relevant Universities are done on your behalf.</li>
-                <li>Interviews arranged and secured through negotiations by our staff members.</li>
-                <li>Guranteed Visa Applications and possible scholorships with the proper requirements.</li>
+                <li id="TOPLEVELDetail1">
+                  创造良好的印象以及如杀手锏般的简历和动机信以及报告
+                </li>
+                <li id="TOPLEVELDetail2">来自真正的大学评审团的面试培训</li>
+                <li id="TOPLEVELDetail3">
+                  可以展现出您自己都看不到的优势的个性化培训
+                </li>
               </ul>
             </div>
             <div class="panel-footer">
-              <button class="btn btn-ghost ghost-red">Get Started Today
-                <i class="icon icon-forward"></i>
+              <button class="btn btn-ghost ghost-red">
+                Get Started Today <i class="icon icon-forward"></i>
               </button>
             </div>
           </div>
@@ -272,31 +419,28 @@
       <div class="columns">
         <div class="column signup-form">
           <h1 class="h3 section-title">Let's Get the Future Started</h1>
-          <form action="#" method="post" id="contact_form" class="form-horizontal">
-            <div class="name">
-              <label for="name"></label>
-              <input type="text" placeholder="My name is" name="name" id="name_input" required>
-            </div>
-            <div class="email">
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="My name is" name="name" id="name_input" required />
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+              required />
+          </div>
+          <div class="telephone">
+            <label for="name"></label>
+            <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required />
+          </div>
 
-              <label for="email"></label>
-              <input type="email" placeholder="My e-mail is" name="email" id="email_input" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-                required>
-            </div>
-            <div class="telephone">
-              <label for="name"></label>
-              <input type="tel" placeholder="1-(888)-888-8888" name="telephone" id="telephone_input" required>
-            </div>
-
-            <div class="submit">
-              <button type="submit" value="Send Message" class="btn-fancy btn-red btn-lg">
-                <i data-feather="calendar"></i> Book a meeting today
-              </button>
-            </div>
-          </form>
+          <div class="submit">
+            <button class="btn-fancy btn-red btn-lg" onclick="sendEmail()">
+              <i data-feather="calendar"></i> Book a meeting today
+            </button>
+          </div>
         </div>
-        <div class="column">
-          <img src="images/phone.png" alt="" class="img-responsive phone">
+        <div class="column phone hide-sm">
+          <img src="images/phone.png" alt="" class="img-responsive" />
         </div>
       </div>
     </div>
@@ -311,15 +455,9 @@
           </div>
           <div class="column text-right">
             <ul>
-              <li>
-                <a href="#">Cookies</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Sitemap</a></li>
             </ul>
           </div>
         </div>
@@ -328,21 +466,16 @@
   </footer>
 
   <div class="float-sm">
-    <div class="fl-fl float-fb">
-      <i class="fa fa-facebook"></i>
-      <a href="" target="_blank"> Like us!</a>
+    <div class="fl-fl float-phone">
+      <i class="fa fa-phone"></i><span>+86 156 1892 8329</span>
     </div>
-    <div class="fl-fl float-tw">
-      <i class="fa fa-twitter"></i>
-      <a href="" target="_blank">Follow us!</a>
+    <div class="fl-fl float-wechat qr">
+      <i class="fa fa-wechat"></i>
+      <div class="tooltip"><img src="images/qr1.jpg" /></div>
     </div>
-    <div class="fl-fl float-ig">
-      <i class="fa fa-instagram"></i>
-      <a href="" target="_blank">Follow us!</a>
-    </div>
-    <div class="fl-fl float-pn qr">
-      <i class="fa fa-pinterest"></i>
-      <div class="tooltip"><img src="images/qr.png" /></div>
+    <div class="fl-fl float-users qr">
+      <i class="fa fa-users"></i>
+      <div class="tooltip"><img src="images/qr2.jpeg" /></div>
     </div>
   </div>
 
@@ -354,8 +487,16 @@
 
   <script src="js/headroom.js"></script>
   <script src="js/jQuery.headroom.js"></script>
-  <script src="/js/scripts.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/i18next.js"></script>
+  <script>
+    function sendEmail() {
+      let name = `My_name_is_${document.getElementById("name_input").value}`;
+      let phone = `${document.getElementById("telephone_input").value}`;
+      window.location.href = `mailto:info@avefrance.cn?subject=${name}&body=${phone}`;
+    }
 
+  </script>
 </body>
 
 </html>

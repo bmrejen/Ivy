@@ -10,23 +10,27 @@
   color: white;
   z-index: 1;
   @include dark-overlay;
+
   &.main {
     height: 30rem;
   }
+
   &.schools {
     height: 20rem;
   }
+
   &.contact-us {
     height: 30rem;
   }
+
   &:after {
-    background: linear-gradient(
-      to bottom,
+    background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.6) 10%,
-      rgba(0, 0, 0, 0.15) 100%
-    );
+      rgba(0, 0, 0, 0.15) 100%);
   }
+
   .hero-lead {
+
     /*margin-top: auto;*/
     h1 {
       font-size: $font-size * 4;
@@ -34,8 +38,116 @@
       margin-bottom: 0.25rem;
       @include text-shadow;
     }
+
     button {
       letter-spacing: 0.125rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .hero-lead {
+
+    /*margin-top: auto;*/
+    h1 {
+      font-size: $font-size * 3 !important;
+      padding: 2rem;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      @include text-shadow;
+    }
+
+    p {
+      padding: 1rem;
+      font-size: 1.4rem;
+    }
+
+    button {
+      letter-spacing: 0.125rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero {
+    &.main {
+      height: 18rem;
+
+      .hero-lead {
+        h1 {
+          font-size: $font-size * 1.5 !important;
+          padding: 2rem;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          @include text-shadow;
+        }
+
+        p {
+          padding: 1rem;
+          font-size: 1rem;
+        }
+
+        button {
+          letter-spacing: 0.125rem;
+        }
+      }
+    }
+
+    &.schools {
+      height: 20rem;
+
+      .hero-lead {
+        h1 {
+          font-size: $font-size * 1.5 !important;
+          padding: 2rem;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          @include text-shadow;
+        }
+
+        p {
+          padding: 1rem;
+          font-size: 1rem;
+        }
+
+        button {
+          letter-spacing: 0.125rem;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    &.contact-us {
+      height: 24rem;
+
+      .hero-lead {
+        margin-top: -5rem;
+
+        h1 {
+          padding: 0;
+          font-size: 1rem;
+        }
+
+        p {
+          padding: 0;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .hero {
+    &.contact-us {
+      .hero-lead {
+        margin-top: -8rem;
+
+      }
     }
   }
 }

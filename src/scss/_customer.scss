@@ -1,0 +1,93 @@
+.customer {
+  padding: 4rem 0;
+  background-image: url(https://cdn.muckrack.com/static/images/branding/backgrounds/mr-white-pattern.jpg?a90a875b429a);
+  background-size: 500px;
+  border-top: $gray-color-light solid 1px;
+
+  .sep-cust {
+    margin: 0 3rem;
+    margin-bottom: 2rem;
+    color: $gray-color-light;
+  }
+
+  .column {
+    margin-bottom: 2rem;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    background: white;
+    padding: 30px 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    // padding-left: $layout-spacing-lg;
+    // padding-right: $layout-spacing-lg;
+    .content {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .customer-user {
+      display: flex;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+
+      .logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        object-fit: cover;
+      }
+
+      .name {
+        color: #0d86d9;
+        font-size: 16px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .customer {
+    padding: 0 !important;
+
+    .section-title {
+        margin-top: 3rem;
+    }
+
+    .column {
+      background: none;
+      border: none;
+      box-shadow: none;
+
+      &:first-child {
+        padding-top: 1rem;
+      }
+
+      .customer-user {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .customer {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+    .customer {
+      padding: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    .customer {
+      padding: 3rem;
+    }
+  }

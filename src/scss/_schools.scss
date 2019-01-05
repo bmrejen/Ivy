@@ -49,6 +49,7 @@
   .card-image {
     max-height: 7rem;
     vertical-align: middle;
+
     a {
       height: 100%;
       width: 100%;
@@ -83,4 +84,87 @@
   .btn-red .icon {
     color: white;
   }
+}
+
+@media only screen and (max-width: 480px) {
+  .schools {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .container {
+      padding: 0;
+      padding-top: 5px;
+    }
+
+    img {
+      width: 107px;
+    }
+  }
+
+  .school-overview {
+    padding: 1rem 0;
+    background-color: #FAFAFA;
+    border-bottom: $gray-color-light solid 1px;
+    border-top: $gray-color-light solid 1px;
+
+    .section-title {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .school-grid {
+      .school-row {
+        .slick-track {
+          display: flex;
+          align-items: center;
+        }
+
+        img {
+          margin: 0 .4rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .schools {
+    img {
+      width: 135px !important;
+    }
+
+    .school-overview {
+      padding: 0;
+
+    }
+  }
+  .school-overview .school-grid .school-row img {
+    margin: 0 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .schools {
+    img {
+      width: 190px;
+    }
+
+    .school-overview {
+      padding: 1rem;
+
+    }
+  }
+  .school-overview .school-grid .school-row img {
+    margin: 0 1rem;
+  }
+  .school-list {
+    padding: 3rem 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  
 }

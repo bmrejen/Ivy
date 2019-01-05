@@ -63,3 +63,14 @@
 .icon-plane svg path {
   fill: $primary-color !important;
 }
+
+@media only screen and (max-width: 480px) {
+  .journey {
+    padding: 2rem 0;
+    .slider {
+      .slide {
+        height: 12rem;
+      }
+    }
+  }
+}
